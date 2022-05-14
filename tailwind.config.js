@@ -24,6 +24,8 @@ module.exports = {
       "cyan-500": "#00b5d8",
       "cyan-600": "#00a3c4",
 
+      "gray-100": "#EDF2F7",
+      "gray-200": "#E2E8F0",
       "gray-300": "#cbd5e0",
       "gray-400": "#a0aec0",
       "gray-500": "#718096",
@@ -33,6 +35,7 @@ module.exports = {
       "gray-900": "#171923",
 
       "purple-800": "#bd3dbd",
+      white: "#fff",
     },
   },
   plugins: [],

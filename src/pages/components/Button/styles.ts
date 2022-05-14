@@ -22,7 +22,7 @@ export const ButtonVariant = styled("button", {
       },
       full: {
         backgroundColor: "#bd3dbd",
-        boxShadow: "0 0 10px rgba(0,0,0,0.2)",
+        boxShadow: "0 0 10px rgba(0,0,0,0.4)",
         color: "#fff",
         width: "150px",
         height: "40px",
@@ -30,6 +30,7 @@ export const ButtonVariant = styled("button", {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        gap: "5px",
         marginTop: "20px",
         "&:hover": {
           transform: "scale(1.1)",

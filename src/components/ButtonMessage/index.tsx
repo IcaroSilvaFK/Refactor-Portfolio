@@ -11,7 +11,7 @@ export function ButtonUp() {
       window.addEventListener("keydown", (e) => {
         switch (e.key) {
           case "Escape": {
-            if (visible) setVisible(false);
+            closeModal();
           }
         }
       });

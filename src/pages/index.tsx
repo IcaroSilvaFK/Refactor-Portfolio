@@ -16,7 +16,6 @@ interface IUserProps {
 }
 
 const Home: NextPage<{ data: IUserProps }> = ({ data }) => {
-  console.log(data);
   return (
     <>
       <Head>

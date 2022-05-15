@@ -1,4 +1,4 @@
-import { dateFormatter } from "../../../utils/DateTimeFormatter";
+import { dateFormatter } from "../../utils/DateTimeFormatter";
 import { Button } from "../Button";
 
 interface IProfileProps {

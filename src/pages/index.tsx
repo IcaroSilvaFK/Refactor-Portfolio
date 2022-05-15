@@ -1,9 +1,9 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
-import { TextSection } from "./components/TextSection";
-import { Layout } from "./layout";
+import { TextSection } from "../components/TextSection";
+import { Layout } from "../layout";
 import axios from "axios";
-import { CardProfile } from "./components/CardProfile";
+import { CardProfile } from "../components/CardProfile";
 
 interface IUserProps {
   avatar_url: string;

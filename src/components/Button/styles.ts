@@ -50,6 +50,9 @@ export const ButtonVariant = styled("button", {
             textDecoration: "none",
             color: "#a0aec0",
           },
+          svg: {
+            fill: "#a0aec0",
+          },
         },
       },
     },

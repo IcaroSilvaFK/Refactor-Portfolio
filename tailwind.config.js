@@ -38,5 +38,5 @@ module.exports = {
       white: "#fff",
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms"), require("tailwind-scrollbar")],
 };

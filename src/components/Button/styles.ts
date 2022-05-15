@@ -32,6 +32,11 @@ export const ButtonVariant = styled("button", {
         justifyContent: "center",
         gap: "5px",
         marginTop: "20px",
+        a: {
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        },
         "&:hover": {
           transform: "scale(1.1)",
           transition: "all",
@@ -44,6 +49,12 @@ export const ButtonVariant = styled("button", {
         span: {
           textDecoration: "underline",
           textDecorationThickness: "2px",
+        },
+        a: {
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: 5,
         },
         "&:hover": {
           span: {

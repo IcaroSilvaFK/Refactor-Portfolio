@@ -23,7 +23,13 @@ export function CardProfile({
   return (
     <section className='bg-gray-700 p-16 flex justify-center items-center flex-col'>
       <div className='flex items-center gap-4'>
-        <div>
+        <div className='relative'>
+          <div
+            className='absolute bottom-5 right-0 bg-gray-800 rounded-full p-[2px]'
+            title='focusing'
+          >
+            🚀
+          </div>
           <img
             src={avatar_url}
             alt=''
@@ -53,7 +59,7 @@ export function CardProfile({
         </div>
       </div>
 
-      <Button variant='text' text=' Ir para perfil' link={html_url} />
+      <Button variant='text' text='Ir para perfil' link={html_url} />
     </section>
   );
 }

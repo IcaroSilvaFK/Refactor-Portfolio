@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Header() {
   return (
-    <header className='flex justify-between items-center py-8 px-16 border-b'>
+    <header className='flex justify-around items-center py-8 border-b gap-16'>
       <div className='flex flex-col'>
         <strong className='font-square text-4xl text-purple-800'>
           Icaro Vieira

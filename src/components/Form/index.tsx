@@ -41,7 +41,7 @@ export function Form({ closeModal }: IFormComponentProps) {
         className='flex flex-col justify-center p-4 gap-2 relative z-1'
       >
         <div
-          className='absolute top-[-15px] right-[-10px] bg-purple-800 p-2 rounded-full shadow-sm'
+          className='absolute top-[-15px] right-[-10px] bg-purple-800 p-2 rounded-full cursor-pointer'
           onClick={closeModal}
         >
           <AiOutlineClose color='#fff' size={20} />

@@ -38,7 +38,8 @@ export function ButtonUp() {
       {visible === false && (
         <button
           onClick={handleChangeVisible}
-          className='fixed bottom-8 right-8 bg-purple-800 p-2 rounded-full cursor-pointer shadow'
+          className='fixed bottom-8 right-8 bg-purple-800 p-2 rounded-full cursor-pointer shadow
+            hover:scale-105 transition'
         >
           <RiMessage3Line size={20} color='#fff' />
         </button>

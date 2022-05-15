@@ -1,9 +1,10 @@
 import { dateFormatter } from "../../../utils/DateTimeFormatter";
+import { Button } from "../Button";
 
 interface IProfileProps {
   avatar_url: string;
   created_at: string;
-  url: string;
+  html_url: string;
   followers: number;
   following: number;
   bio: string;
@@ -16,7 +17,7 @@ export function CardProfile({
   created_at,
   followers,
   following,
-  url,
+  html_url,
   name,
 }: IProfileProps) {
   return (
@@ -51,14 +52,8 @@ export function CardProfile({
           </div>
         </div>
       </div>
-      <a
-        href={url}
-        rel='noreferrer'
-        target='_blank'
-        className='text-white my-4 hover:text-gray-400 transition'
-      >
-        Ir para perfil
-      </a>
+
+      <Button variant='text' text=' Ir para perfil' link={html_url} />
     </section>
   );
 }

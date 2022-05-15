@@ -4,7 +4,7 @@ interface IButtonProps {
   icon?: JSX.Element;
   text?: string;
   link?: string;
-  variant: "outline" | "full";
+  variant: "outline" | "full" | "text";
 }
 
 export function Button({ icon, text, variant, link }: IButtonProps) {

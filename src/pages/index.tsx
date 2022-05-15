@@ -8,7 +8,7 @@ import { CardProfile } from "./components/CardProfile";
 interface IUserProps {
   avatar_url: string;
   created_at: string;
-  url: string;
+  html_url: string;
   followers: number;
   following: number;
   bio: string;
@@ -20,7 +20,7 @@ const Home: NextPage<{ data: IUserProps }> = ({ data }) => {
   return (
     <>
       <Head>
-        <title>Hello world</title>
+        <title>Icaro Vieira DEV</title>
       </Head>
       <Layout>
         <TextSection />

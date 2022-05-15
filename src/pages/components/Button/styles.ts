@@ -38,6 +38,20 @@ export const ButtonVariant = styled("button", {
           transitionDuration: ".2s",
         },
       },
+      text: {
+        backgroundColor: "transparent",
+        color: "#fff",
+        span: {
+          textDecoration: "underline",
+          textDecorationThickness: "2px",
+        },
+        "&:hover": {
+          span: {
+            textDecoration: "none",
+            color: "#a0aec0",
+          },
+        },
+      },
     },
   },
 });

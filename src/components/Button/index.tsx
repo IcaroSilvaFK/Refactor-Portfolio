@@ -11,7 +11,7 @@ export function Button({ icon, text, variant, link }: IButtonProps) {
   return (
     <ButtonVariant color={variant}>
       {variant === "outline" || "text" ? (
-        <a href={link} target='_blanck'>
+        <a href={link} target='_blanck' className='block'>
           {icon}
           <span>{text}</span>{" "}
         </a>

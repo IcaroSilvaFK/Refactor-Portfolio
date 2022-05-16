@@ -27,8 +27,6 @@ export default async function email(
     body: `<div><b>${message}</b></div>`,
   };
 
-  console.log(sendEmail);
-
   try {
     const data = await transport.sendMail({
       subject: "Icaro Portfólio",

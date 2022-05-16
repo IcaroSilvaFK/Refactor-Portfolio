@@ -4,6 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { AiOutlineUser, AiOutlineClose } from "react-icons/ai";
 import { BiMessageSquareDetail } from "react-icons/bi";
 import { RiSendPlaneFill } from "react-icons/ri";
+import { toast } from "react-toastify";
 
 import { Button } from "../Button";
 import { Input } from "./Input";
@@ -32,12 +33,21 @@ export function Form({ closeModal }: IFormComponentProps) {
   });
 
   const onSubmit: SubmitHandler<IFormProps> = async (data) => {
-    console.log(data);
     try {
       await axios.post("/api/email", data);
       setSuccess(true);
+      toast.success("Mensagem enviada com sucesso obrigado !🥳", {
+        position: "top-center",
+        draggable: true,
+        theme: "light",
+      });
     } catch (error) {
       setSuccess(false);
+      toast.success("Infelizmente não conseguimos enviar a mensagem !😥", {
+        position: "top-center",
+        draggable: true,
+        theme: "light",
+      });
     }
     props.reset();
   };

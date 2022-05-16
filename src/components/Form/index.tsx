@@ -34,7 +34,7 @@ export function Form({ closeModal }: IFormComponentProps) {
   const onSubmit: SubmitHandler<IFormProps> = async (data) => {
     console.log(data);
     try {
-      const response = await axios.post("/api/email", data);
+      await axios.post("/api/email", data);
       setSuccess(true);
     } catch (error) {
       setSuccess(false);

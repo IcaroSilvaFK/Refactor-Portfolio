@@ -4,6 +4,7 @@ import { TextSection } from "../components/TextSection";
 import { Layout } from "../layout";
 import axios from "axios";
 import { CardProfile } from "../components/CardProfile";
+import { MoreInfo } from "../components/MoreInfo";
 
 interface IUserProps {
   avatar_url: string;
@@ -24,6 +25,7 @@ const Home: NextPage<{ data: IUserProps }> = ({ data }) => {
       <Layout>
         <TextSection />
         <CardProfile {...data} />
+        <MoreInfo image={data.avatar_url} />
       </Layout>
     </>
   );

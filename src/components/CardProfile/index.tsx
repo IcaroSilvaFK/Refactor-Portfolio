@@ -1,5 +1,6 @@
 import { dateFormatter } from "../../utils/DateTimeFormatter";
 import { Button } from "../Button";
+import { Status } from "../Status";
 
 interface IProfileProps {
   avatar_url: string;
@@ -24,12 +25,7 @@ export function CardProfile({
     <section className='bg-gray-700 p-16 flex justify-center items-center flex-col'>
       <div className='flex items-center gap-4'>
         <div className='relative'>
-          <div
-            className='absolute bottom-5 right-0 bg-gray-800 rounded-full p-[2px]'
-            title='focusing'
-          >
-            🚀
-          </div>
+          <Status />
           <img
             src={avatar_url}
             alt=''

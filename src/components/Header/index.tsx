@@ -13,17 +13,23 @@ export function Header() {
         <ul className='flex gap-8 text-lg'>
           <li>
             <Link href='/'>
-              <a className='hover:text-purple-800 transition'>Sobre</a>
+              <a className='hover:text-purple-800 hover:underline  transition'>
+                Home
+              </a>
             </Link>
           </li>
           <li>
-            <Link href='/'>
-              <a className='hover:text-purple-800 transition'>Projetos</a>
+            <Link href='/projects'>
+              <a className='hover:text-purple-800 hover:underline transition'>
+                Projetos
+              </a>
             </Link>
           </li>
           <li>
-            <Link href='/'>
-              <a className='hover:text-purple-800 transition'>Contato</a>
+            <Link href='/Contacts'>
+              <a className='hover:text-purple-800 hover:underline  transition'>
+                Contato
+              </a>
             </Link>
           </li>
         </ul>

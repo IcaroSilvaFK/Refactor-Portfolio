@@ -15,7 +15,10 @@ const Contacts: NextPage = () => {
         <title>Contato</title>
       </Head>
       <Layout>
-        <section className='flex justify-center items-center flex-col mt-12'>
+        <div className='w-[1000px] mt-6'>
+          <h1 className='text-center text-xl'>Contatos :</h1>
+        </div>
+        <section className='flex justify-center items-center flex-col mt-8'>
           <SimpleCardContact
             icon={<SiWhatsapp size={20} color='#48BB78' />}
             text='Whatsapp :'
@@ -32,7 +35,7 @@ const Contacts: NextPage = () => {
             contact='@IcaroVieiraFK'
           />
         </section>
-        <section>
+        <section className='flex gap-3 mt-10 justify-center'>
           <HorizontalCard
             alt='Instagram'
             image='https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white'
@@ -44,11 +47,12 @@ const Contacts: NextPage = () => {
             link='https://github.com/IcaroSilvaFK'
           />
           <HorizontalCard
-            alt='Instagram'
+            alt='LinkeIn'
             image='https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white'
-            link='Instagram'
+            link='www.linkedin.com/in/icarovieira'
           />
         </section>
+        <div className='mb-[80px]'></div>
       </Layout>
     </>
   );

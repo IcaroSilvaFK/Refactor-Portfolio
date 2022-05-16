@@ -28,14 +28,13 @@ interface IPrismcPosts {
 }
 
 const Projects: NextPage<{ posts: IPrismcPosts[] }> = ({ posts }) => {
-  console.log(posts);
   return (
     <>
       <Head>
         <title>Projects</title>
       </Head>
       <Layout>
-        <div className='flex justify-center mt-6'>
+        <div className='flex justify-center mt-6 flex-col gap-5 items-center'>
           {posts.map((element) => (
             <CardPost key={element.id} {...element} />
           ))}

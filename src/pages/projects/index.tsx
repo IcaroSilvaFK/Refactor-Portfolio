@@ -31,7 +31,7 @@ const Projects: NextPage<{ posts: IPrismcPosts[] }> = ({ posts }) => {
   return (
     <>
       <Head>
-        <title>Projects</title>
+        <title>Icaro Vieira DEV</title>
       </Head>
       <Layout>
         <div className='flex justify-center mt-6 flex-col gap-5 items-center mobile:p-2'>

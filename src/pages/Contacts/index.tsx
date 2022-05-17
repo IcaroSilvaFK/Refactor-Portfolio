@@ -12,7 +12,7 @@ const Contacts: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Contato</title>
+        <title>Icaro Vieira DEV</title>
       </Head>
       <Layout>
         <div className='w-[1000px] mt-6 mobile:w-[100%]'>

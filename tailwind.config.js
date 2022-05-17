@@ -52,8 +52,8 @@ module.exports = {
       },
       keyframes: {
         levite: {
-          "0%,100%": { transform: "translateY(-10px)" },
-          "50%": { transform: "translateY(0)" },
+          "0%,100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
         },
       },
     },

@@ -6,7 +6,7 @@ interface IHorizontalCardProps {
 
 export function HorizontalCard({ image, link, alt }: IHorizontalCardProps) {
   return (
-    <button className='flex items-center hover:scale-105 transition'>
+    <button className='flex items-center hover:animate-levite transition'>
       <a href={link}>
         <img src={image} alt={alt} width={130} className='shadow-xl' />
       </a>

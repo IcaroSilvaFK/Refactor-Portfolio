@@ -41,9 +41,9 @@ export function CardPost({ data }: ICardPosts) {
               {data.tecnologies.map((tec) => (
                 <img
                   src={tec.tecs.url}
-                  alt=''
+                  alt={tec.tecs.url}
                   key={tec.tecs.url}
-                  className='rounded shadow-md hover:scale-105'
+                  className='rounded shadow-lg hover:scale-105'
                 />
               ))}
             </div>

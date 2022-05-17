@@ -28,7 +28,7 @@ export function CardProfile({
           <Status />
           <img
             src={avatar_url}
-            alt=''
+            alt={name}
             className='rounded-full'
             width={150}
             height={150}
@@ -38,8 +38,10 @@ export function CardProfile({
           <div className='flex flex-col'>
             <strong className='text-white text-lg'>{name}</strong>
             <div className='my-2'>
-              <p className='text-gray-200'>Bio :</p>
-              <span className='text-gray-200 px-2'>{bio}</span>
+              <p className='text-gray-200'>Descrição :</p>
+              <div className='w-[300px] ml-1'>
+                <span className='text-gray-200'>{bio}</span>
+              </div>
             </div>
           </div>
 
@@ -55,7 +57,7 @@ export function CardProfile({
         </div>
       </div>
 
-      <Button variant='text' text='Ir para perfil' link={html_url} />
+      <Button variant='text' text='Ir para o Github' link={html_url} />
     </section>
   );
 }

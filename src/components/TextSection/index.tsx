@@ -11,7 +11,7 @@ export function TextSection() {
       <div className='flex flex-col mobile:items-center mobile:mt-5'>
         <div>
           <ReactTypingEffect
-            text={"Olá me Chamo Icaro :)"}
+            text={"Olá me chamo, Icaro :)"}
             typingDelay={500}
             className='text-4xl'
           />

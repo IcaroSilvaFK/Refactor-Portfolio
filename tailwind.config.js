@@ -48,6 +48,13 @@ module.exports = {
     extend: {
       animation: {
         "bounce-slow": "bounce 2s linear infinite",
+        levite: "levite 3s linear infinite",
+      },
+      keyframes: {
+        levite: {
+          "0%,100%": { transform: "translateY(-10px)" },
+          "50%": { transform: "translateY(0)" },
+        },
       },
     },
   },

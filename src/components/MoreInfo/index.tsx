@@ -8,7 +8,7 @@ export function MoreInfo({ image }: { image: string }) {
             Sou um estudante de Engenharia de Software na UNOPAR, e tecnologias
             de desenvolvimento Front-End.
           </p>
-          <p className='font-bold mt-2 mobile:text-center'>Tecnologias :</p>
+          <p className='font-bold mt-2 mobile:text-center'>Ferramentas :</p>
           <div className='flex flex-wrap gap-2 justify-center mt-2'>
             <img
               src='https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white'

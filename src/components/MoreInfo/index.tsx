@@ -1,6 +1,6 @@
 export function MoreInfo({ image }: { image: string }) {
   return (
-    <section className='flex justify-evenly items-center my-7 mobile:flex-col mobile:gap-4'>
+    <section className='flex justify-evenly items-center my-7 w-[1000px] mx-auto mobile:flex-col mobile:gap-4 mobile:w-auto'>
       <div className='w-80'>
         <h3 className='text-xl font-bold mb-2 mobile:text-center'>Sobre :</h3>
         <div>

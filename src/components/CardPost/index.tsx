@@ -21,7 +21,7 @@ interface ICardPosts {
 
 export function CardPost({ data }: ICardPosts) {
   return (
-    <section className='flex items-center border-dashed border-[4px] border-gray-400 max-w-[1000px] p-2 rounded shadow-lg'>
+    <section className='flex items-center border-dashed border-[4px] border-gray-400 max-w-[1000px] p-2 rounded shadow-lg mobile:flex-col'>
       <div>
         <img
           src={data.image.url}
@@ -30,7 +30,7 @@ export function CardPost({ data }: ICardPosts) {
         />
       </div>
       <div className='flex flex-col ml-4'>
-        <div>
+        <div className='mobile:text-center mobile:p-2'>
           <strong className='mb-3'>{data.title[0].text}</strong>
           <p className='ml-3 text-gray-600'>{data.content[0].text}</p>
           <div className='flex flex-col'>
@@ -49,7 +49,7 @@ export function CardPost({ data }: ICardPosts) {
             </div>
           </div>
         </div>
-        <div className='flex justify-center mt-2'>
+        <div className='flex justify-center mt-2 '>
           <a
             href={data.url.url}
             className='hover:text-gray-600 hover:underline'

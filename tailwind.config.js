@@ -41,6 +41,10 @@ module.exports = {
       "purple-800": "#bd3dbd",
       white: "#fff",
     },
+    screens: {
+      mobile: { max: "500px" },
+      table: { max: "900px" },
+    },
     extend: {
       animation: {
         "bounce-slow": "bounce 2s linear infinite",

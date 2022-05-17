@@ -23,7 +23,7 @@ export function CardProfile({
 }: IProfileProps) {
   return (
     <section className='bg-gray-700 p-16 flex justify-center items-center flex-col'>
-      <div className='flex items-center gap-4'>
+      <div className='flex items-center gap-4 mobile:flex-col mobile:text-center'>
         <div className='relative'>
           <Status />
           <img
@@ -43,7 +43,7 @@ export function CardProfile({
             </div>
           </div>
 
-          <div className='text-gray-200 flex items-end text-left my-2'>
+          <div className='text-gray-200 flex items-end text-left my-2 mobile:flex-col mobile:items-center'>
             <div className=' flex flex-col'>
               <span>seguidores: {followers}</span>
               <span>seguindo: {following}</span>

@@ -15,7 +15,7 @@ const Contacts: NextPage = () => {
         <title>Contato</title>
       </Head>
       <Layout>
-        <div className='w-[1000px] mt-6'>
+        <div className='w-[1000px] mt-6 mobile:w-[100%]'>
           <h1 className='text-center text-xl'>Contatos :</h1>
         </div>
         <section className='flex justify-center items-center flex-col mt-8'>
@@ -35,7 +35,7 @@ const Contacts: NextPage = () => {
             contact='@IcaroVieiraFK'
           />
         </section>
-        <section className='flex gap-3 mt-10 justify-center'>
+        <section className='flex gap-3 mt-10 justify-center mobile:p-2'>
           <HorizontalCard
             alt='Instagram'
             image='https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white'
@@ -52,7 +52,7 @@ const Contacts: NextPage = () => {
             link='www.linkedin.com/in/icarovieira'
           />
         </section>
-        <div className='mb-[80px]'></div>
+        <div className='mb-[80px] mobile:mb-[100px]'></div>
       </Layout>
     </>
   );

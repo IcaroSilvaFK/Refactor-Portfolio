@@ -7,8 +7,8 @@ import { Button } from "../Button";
 
 export function TextSection() {
   return (
-    <section className='flex items-center justify-center w-[100%]'>
-      <div className='flex flex-col'>
+    <section className='flex items-center justify-center w-[100%] mobile:flex-col mobile:items-center'>
+      <div className='flex flex-col mobile:items-center mobile:mt-5'>
         <div>
           <ReactTypingEffect
             text={"Olá me Chamo Icaro :)"}
@@ -16,7 +16,7 @@ export function TextSection() {
             className='text-4xl'
           />
         </div>
-        <div className='py-6 w-[450px]'>
+        <div className='py-6 w-[450px] mobile:w-auto mobile:p-3'>
           <p className='text-lg text-gray-500'>
             Desenvolvedor web, Front-End apaixonado por tecnologia.
           </p>

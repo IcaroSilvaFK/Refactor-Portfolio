@@ -1,12 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import { SiWhatsapp, SiTwitter } from "react-icons/si";
 import { MdOutlineAlternateEmail } from "react-icons/md";
+import { SiTwitter, SiWhatsapp } from "react-icons/si";
 
-import { Layout } from "../../layout";
-import { SimpleCardContact } from "../../components/CardContact/SimpleCard";
 import { HorizontalCard } from "../../components/CardContact/Horizontal";
+import { SimpleCardContact } from "../../components/CardContact/SimpleCard";
+import { Layout } from "../../layout";
 
 const Contacts: NextPage = () => {
   return (

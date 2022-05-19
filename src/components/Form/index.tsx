@@ -1,16 +1,16 @@
-import { useState } from "react";
-import { FormProvider, useForm, SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { AiOutlineUser, AiOutlineClose } from "react-icons/ai";
+import axios from "axios";
+import { useState } from "react";
+import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
+import { AiOutlineClose, AiOutlineUser } from "react-icons/ai";
 import { BiMessageSquareDetail } from "react-icons/bi";
 import { RiSendPlaneFill } from "react-icons/ri";
 import { toast } from "react-toastify";
-import axios from "axios";
 
-import { Button } from "../Button";
-import { Input } from "./Input";
 import { formSchema } from "../../schemas/formmessage.schema";
+import { Button } from "../Button";
 import { Success } from "../Success";
+import { Input } from "./Input";
 
 interface IFormComponentProps {
   closeModal: () => void;
@@ -34,13 +34,14 @@ export function Form({ closeModal }: IFormComponentProps) {
 
   const onSubmit: SubmitHandler<IFormProps> = async (data) => {
     try {
-      await axios.post("/api/email", data);
+      const resposne = await axios.post("/api/email", data);
       setSuccess(true);
       toast.success("Mensagem enviada com sucesso obrigado !🥳", {
         position: "top-center",
         draggable: true,
         theme: "light",
       });
+      console.log(resposne);
     } catch (error) {
       setSuccess(false);
       toast.success("Infelizmente não conseguimos enviar a mensagem !😥", {

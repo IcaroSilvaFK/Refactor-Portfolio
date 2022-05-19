@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
+import { prisma } from "../../../configs/prismaClient";
 
 export default async function email(
   request: NextApiRequest,
@@ -35,7 +36,16 @@ export default async function email(
       html: sendEmail.body,
     });
 
-    return response.status(200).json({ data });
+    const email = await prisma.contacts.create({
+      data: {
+        email: name,
+      },
+    });
+
+    return response.status(200).json({
+      data,
+      email,
+    });
   } catch (error) {
     return response.status(500).json({ message: "Error has ben ocorried" });
   }

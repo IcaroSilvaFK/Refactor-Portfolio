@@ -31,7 +31,7 @@ export function ButtonUp() {
   return (
     <div
       onClick={(e) => e.stopPropagation()}
-      className='fixed bottom-8 right-8 my-8 flex items-center justify-center  bg-purple-800 rounded'
+      className='fixed bottom-8 right-8 my-8 flex items-center justify-center  bg-purple-800 rounded shadow-xl'
     >
       {visible && <Form closeModal={closeModal} />}
 

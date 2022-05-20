@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
  * 
  * @returns 
  *  ? "flex flex-col items-center gap-2 p-4  w-[100%]"
-        : "flex flex-col items-center gap-2 p-4  w-[100%]  absolute bottom-0"
+    : "flex flex-col items-center gap-2 p-4  w-[100%]  absolute bottom-0"
  * 
  */
 

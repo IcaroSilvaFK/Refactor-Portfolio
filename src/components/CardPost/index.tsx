@@ -23,7 +23,7 @@ interface ICardPosts {
 
 export function CardPost({ data }: ICardPosts) {
   return (
-    <Bounce>
+    <Bounce left>
       <section className="flex items-center border-dashed border-[4px] border-gray-400 max-w-[1000px] p-2 rounded shadow-lg mobile:flex-col">
         <div>
           <img

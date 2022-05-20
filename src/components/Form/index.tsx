@@ -7,7 +7,7 @@ import { BiMessageSquareDetail } from "react-icons/bi";
 import { RiSendPlaneFill } from "react-icons/ri";
 import { toast } from "react-toastify";
 
-import { formSchema } from "../../schemas/formmessage.schema";
+import { formSchema } from "../../schemas/formMessage.schema";
 import { Button } from "../Button";
 import { Success } from "../Success";
 import { Input } from "./Input";
@@ -41,7 +41,6 @@ export function Form({ closeModal }: IFormComponentProps) {
         draggable: true,
         theme: "light",
       });
-      console.log(resposne);
     } catch (error) {
       setSuccess(false);
       toast.success("Infelizmente não conseguimos enviar a mensagem !😥", {
@@ -63,35 +62,35 @@ export function Form({ closeModal }: IFormComponentProps) {
       ) : (
         <form
           onSubmit={props.handleSubmit(onSubmit)}
-          className='flex flex-col justify-center p-4 gap-2 relative z-1'
+          className="flex flex-col justify-center p-4 gap-2 relative z-1"
         >
           <div
-            className='absolute top-[-15px] right-[-10px] bg-purple-800 p-2 rounded-full cursor-pointer'
+            className="absolute top-[-15px] right-[-10px] bg-purple-800 p-2 rounded-full cursor-pointer"
             onClick={closeModal}
           >
-            <AiOutlineClose color='#fff' size={20} />
+            <AiOutlineClose color="#fff" size={20} />
           </div>
           <Input
-            placeholder='Email'
-            name='name'
-            type='email'
+            placeholder="Email"
+            name="name"
+            type="email"
             icon={<AiOutlineUser size={20} />}
           />
 
-          <div className='flex items-start p-2 gap-2'>
-            <BiMessageSquareDetail size={20} color='#fff' />
+          <div className="flex items-start p-2 gap-2">
+            <BiMessageSquareDetail size={20} color="#fff" />
             <textarea
-              id=''
+              id=""
               {...props.register("message")}
-              className='resize-none w-[250px] h-16 outline-none rounded p-2 scrolllbar  scrollbar-track-transparent scrollbar-thin'
-              placeholder='Deixe aqui sua mensagem'
+              className="resize-none w-[250px] h-16 outline-none rounded p-2 scrolllbar  scrollbar-track-transparent scrollbar-thin"
+              placeholder="Deixe aqui sua mensagem"
             />
           </div>
-          <div className='flex justify-center'>
+          <div className="flex justify-center">
             <Button
-              variant='text'
-              text='enviar'
-              icon={<RiSendPlaneFill size={20} color='#fff' />}
+              variant="text"
+              text="enviar"
+              icon={<RiSendPlaneFill size={20} color="#fff" />}
             />
           </div>
         </form>

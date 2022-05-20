@@ -1,5 +1,6 @@
-import { LazyMotion, domAnimation, m } from "framer-motion";
-
+import { LazyMotion, domAnimation, m, useViewportScroll } from "framer-motion";
+import Roll from "react-reveal/Roll";
+import Bounce from "react-reveal/Bounce";
 import { dateFormatter } from "../../utils/DateTimeFormatter";
 import { Button } from "../Button";
 import { Status } from "../Status";
@@ -26,41 +27,46 @@ export function CardProfile({
   return (
     <LazyMotion features={domAnimation}>
       <section className="bg-gray-700 p-16 flex justify-center items-center flex-col mt-2">
-        <m.div className="flex items-center gap-8 mobile:flex-col mobile:text-center">
-          <div className="relative">
-            <Status />
-            <img
-              src={avatar_url}
-              alt={name}
-              width={150}
-              height={150}
-              className="rounded-full"
-            />
-          </div>
-          <div className="flex flex-col">
+        <m.div className="flex items-center gap-12 mobile:flex-col mobile:text-center">
+          <Roll>
+            <div className="relative">
+              <Status />
+              <img
+                src={avatar_url}
+                alt={name}
+                width={150}
+                height={150}
+                className="rounded-full"
+              />
+            </div>
+          </Roll>
+          <Bounce>
             <div className="flex flex-col">
-              <strong className="text-white text-lg">{name}</strong>
-              <div className="my-2">
-                <p className="text-gray-200">Descrição :</p>
-                <div className="w-[300px] ml-1">
-                  <span className="text-gray-200">{bio}</span>
+              <div className="flex flex-col">
+                <strong className="text-white text-lg">{name}</strong>
+                <div className="my-2">
+                  <p className="text-gray-200">Descrição :</p>
+                  <div className="w-[300px] ml-1">
+                    <span className="text-gray-200">{bio}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="text-gray-200 flex items-end text-left my-2 mobile:flex-col mobile:items-center">
+                <div className=" flex flex-col">
+                  <span>seguidores: {followers}</span>
+                  <span>seguindo: {following}</span>
+                </div>
+                <div>
+                  criado: <em>{dateFormatter(created_at)}</em>
                 </div>
               </div>
             </div>
-
-            <div className="text-gray-200 flex items-end text-left my-2 mobile:flex-col mobile:items-center">
-              <div className=" flex flex-col">
-                <span>seguidores: {followers}</span>
-                <span>seguindo: {following}</span>
-              </div>
-              <div>
-                criado: <em>{dateFormatter(created_at)}</em>
-              </div>
-            </div>
-          </div>
+          </Bounce>
         </m.div>
-
-        <Button variant="text" text="Ir para o Github" link={html_url} />
+        <div className="flex items-center jsutify-center ml-14 mobile:ml-0">
+          <Button variant="text" text="Ir para o Github" link={html_url} />
+        </div>
       </section>
     </LazyMotion>
   );

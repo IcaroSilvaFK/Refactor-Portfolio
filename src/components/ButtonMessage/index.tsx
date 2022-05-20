@@ -31,17 +31,17 @@ export function ButtonUp() {
   return (
     <div
       onClick={(e) => e.stopPropagation()}
-      className='fixed bottom-8 right-8 my-8 flex items-center justify-center  bg-purple-800 rounded shadow-xl'
+      className="fixed bottom-8 right-8 my-8 flex items-center justify-center  bg-purple-800 rounded shadow-xl"
     >
       {visible && <Form closeModal={closeModal} />}
 
       {visible === false && (
         <button
           onClick={handleChangeVisible}
-          className='fixed bottom-8 right-8 bg-purple-800 p-2 rounded-full cursor-pointer shadow
-            hover:scale-105 transition'
+          className="fixed bottom-8 right-8 bg-purple-800 p-2 rounded-full cursor-pointer shadow
+            hover:scale-105 transition"
         >
-          <RiMessage3Line size={20} color='#fff' />
+          <RiMessage3Line size={20} color="#fff" />
         </button>
       )}
     </div>

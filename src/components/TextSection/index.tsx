@@ -36,16 +36,13 @@ export function TextSection() {
         animate={{ scale: [0, 1] }}
         transition={{ duration: 1 }}
       >
-        <motion.div
-          animate={{ x: [-100, 0] }}
-          transition={{ ease: "easeOut", duration: 1 }}
-        >
+        <div>
           <ReactTypingEffect
             text={"Olá me chamo, Icaro :)"}
-            typingDelay={500}
+            typingDelay={100}
             className="text-4xl"
           />
-        </motion.div>
+        </div>
         <motion.div
           className="py-6 w-[450px] mobile:w-auto mobile:p-3"
           animate={{ x: [100, 0] }}

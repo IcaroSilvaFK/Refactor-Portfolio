@@ -12,16 +12,14 @@ export function ContactForm() {
     formState: { errors },
   } = useForm<IContactFormProps>();
 
-  const onSubmit: SubmitHandler<IContactFormProps> = (data) => {
-    console.log(data);
-  };
+  const onSubmit: SubmitHandler<IContactFormProps> = (data) => {};
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div>
-        <input type='email' {...register("email")} />
+        <input type="email" {...register("email")} />
       </div>
-      <Button variant='text' text='Enviar email' />
+      <Button variant="text" text="Enviar email" />
     </form>
   );
 }

@@ -1,6 +1,7 @@
 import type { GetStaticProps, NextPage } from "next";
-import Head from "next/head";
 import axios from "axios";
+import { useViewportScroll } from "framer-motion";
+import Head from "next/head";
 
 import { TextSection } from "../components/TextSection";
 import { Layout } from "../layout";

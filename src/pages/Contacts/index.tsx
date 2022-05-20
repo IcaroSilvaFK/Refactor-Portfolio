@@ -47,7 +47,6 @@ const Contacts: NextPage = () => {
             link="https://www.linkedin.com/in/icarovieira"
           />
         </section>
-        <div className="mb-[140px] mobile:mb-[100px]"></div>
       </Layout>
     </>
   );

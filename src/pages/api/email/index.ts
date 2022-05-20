@@ -47,7 +47,6 @@ export default async function email(
       email,
     });
   } catch (error) {
-    console.log(error);
     return response.status(500).json({ message: "Error has ben ocorried" });
   }
 }

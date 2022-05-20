@@ -2,56 +2,101 @@ import ReactTypingEffect from "react-typing-effect";
 import Image from "next/image";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { HiOutlineDownload } from "react-icons/hi";
+import { motion } from "framer-motion";
 
 import { Button } from "../Button";
 
+const cotainer = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 1,
+      staggerDirection: -1,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1 },
+};
+
 export function TextSection() {
   return (
-    <section className='flex items-center justify-center w-[100%] mobile:flex-col mobile:items-center'>
-      <div className='flex flex-col mobile:items-center mobile:mt-5'>
-        <div>
+    <motion.section
+      className="flex items-center justify-center w-[100%] mobile:flex-col mobile:items-center"
+      variants={cotainer}
+      initial="hidden"
+      animate="show"
+    >
+      <motion.div
+        className="flex flex-col mobile:items-center mobile:mt-5"
+        variants={item}
+        animate={{ scale: [0, 1] }}
+        transition={{ duration: 1 }}
+      >
+        <motion.div
+          animate={{ x: [-100, 0] }}
+          transition={{ ease: "easeOut", duration: 1 }}
+        >
           <ReactTypingEffect
             text={"Olá me chamo, Icaro :)"}
             typingDelay={500}
-            className='text-4xl'
+            className="text-4xl"
           />
-        </div>
-        <div className='py-6 w-[450px] mobile:w-auto mobile:p-3'>
-          <p className='text-lg text-gray-500'>
+        </motion.div>
+        <motion.div
+          className="py-6 w-[450px] mobile:w-auto mobile:p-3"
+          animate={{ x: [100, 0] }}
+          transition={{ ease: "easeOut", duration: 2.5 }}
+        >
+          <p className="text-lg text-gray-500">
             Desenvolvedor web, Front-End apaixonado por tecnologia.
           </p>
-        </div>
-        <div className='flex flex-col'>
-          <div className='flex gap-8 ml-4'>
+        </motion.div>
+        <div className="flex flex-col">
+          <motion.div
+            className="flex gap-8 ml-4"
+            animate={{ opacity: [0, 1] }}
+            transition={{ ease: "linear", duration: 1 }}
+          >
             <Button
-              variant='outline'
+              variant="outline"
               icon={<AiFillLinkedin size={25} />}
-              link='https://www.linkedin.com/in/icarovieira/'
+              link="https://www.linkedin.com/in/icarovieira/"
             />
             <Button
-              variant='outline'
+              variant="outline"
               icon={<AiFillGithub size={25} />}
-              link='https://github.com/IcaroSilvaFK'
+              link="https://github.com/IcaroSilvaFK"
             />
-          </div>
-          <div className='flex px-14'>
+          </motion.div>
+          <motion.div
+            className="flex px-14"
+            animate={{ opacity: [0, 1] }}
+            transition={{ ease: "linear", duration: 1 }}
+          >
             <Button
-              variant='full'
+              variant="full"
               icon={<HiOutlineDownload size={25} />}
-              link='/assets/icaroCurriculum.pdf'
-              text='Currículo'
+              link="/assets/icaroCurriculum.pdf"
+              text="Currículo"
             />
-          </div>
+          </motion.div>
         </div>
-      </div>
-      <div>
+      </motion.div>
+      <motion.div
+        animate={{ scale: [0, 1] }}
+        transition={{ ease: "easeOut", duration: 1 }}
+      >
         <Image
-          src='/assets/icon.png'
+          src="/assets/icon.png"
           width={560}
           height={560}
-          alt='Programing Focusing'
+          alt="Programing Focusing"
         />
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }

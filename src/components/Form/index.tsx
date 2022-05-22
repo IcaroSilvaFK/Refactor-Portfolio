@@ -7,7 +7,7 @@ import { BiMessageSquareDetail } from "react-icons/bi";
 import { RiSendPlaneFill } from "react-icons/ri";
 import { toast } from "react-toastify";
 
-import { formSchema } from "../../schemas/formMessage.schema";
+import { formSchema } from "../../schemas/formMessage";
 import { Button } from "../Button";
 import { Success } from "../Success";
 import { Input } from "./Input";

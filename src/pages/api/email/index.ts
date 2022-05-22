@@ -1,6 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 import { apiBackend } from "../../../configs/axiosBackend";
+function a() {}
 
 export default async function email(
   request: NextApiRequest,

@@ -32,7 +32,7 @@ export function CardPost({ data }: ICardPosts) {
             className="w-[40rem] rounded shadow-md"
           />
         </div>
-        <div className="flex flex-col ml-4">
+        <div className="flex flex-col justify-center items-center ml-4">
           <div className="mobile:text-center mobile:p-2">
             <strong className="mb-3">{data.title[0].text}</strong>
             <p className="ml-3 text-gray-600">{data.content[0].text}</p>

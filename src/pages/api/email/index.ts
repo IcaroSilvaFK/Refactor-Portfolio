@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
-import { prisma } from "../../../configs/prismaClient";
+import { apiBackend } from "../../../configs/axiosBackend";
 
 export default async function email(
   request: NextApiRequest,
@@ -8,8 +8,8 @@ export default async function email(
 ) {
   const { method } = request;
 
-  if (method === "GET") {
-    return response.status(404).json({ message: "Cannot Get" });
+  if (method !== "POST") {
+    return response.status(404).json({ message: "Cannot route" });
   }
 
   if (method === "POST") {
@@ -33,7 +33,7 @@ export default async function email(
       email: `Icaro portfolio <${name}>`,
       body: `<div><b>${message}</b></div>`,
     };
-
+    await apiBackend.post("/", { email: name });
     try {
       const data = await transport.sendMail({
         subject: "Icaro Portfólio",
@@ -42,17 +42,12 @@ export default async function email(
         html: sendEmail.body,
       });
 
-      const email = await prisma.contacts.create({
-        data: {
-          email: name,
-        },
-      });
-
       return response.status(200).json({
         data,
         email,
       });
     } catch (error) {
+      console.log(error);
       return response.status(500).json({ message: "Error has ben ocorried" });
     }
   }

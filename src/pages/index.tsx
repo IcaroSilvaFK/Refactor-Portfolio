@@ -1,12 +1,11 @@
 import type { GetStaticProps, NextPage } from "next";
-import axios from "axios";
-import { useViewportScroll } from "framer-motion";
 import Head from "next/head";
 
 import { TextSection } from "../components/TextSection";
 import { Layout } from "../layout";
 import { CardProfile } from "../components/CardProfile";
 import { MoreInfo } from "../components/MoreInfo";
+import { userGithub } from "../configs/axiosGitihub";
 
 interface IUserProps {
   avatar_url: string;
@@ -35,9 +34,7 @@ const Home: NextPage<{ data: IUserProps }> = ({ data }) => {
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   try {
-    const { data } = await axios.get(
-      "https://api.github.com/users/IcaroSilvaFK"
-    );
+    const { data } = await userGithub("IcaroSilvaFK");
 
     return {
       props: { data },

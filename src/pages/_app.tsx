@@ -8,10 +8,12 @@ import "react-toastify/dist/ReactToastify.css";
 import { ButtonUp } from "../components/ButtonMessage";
 import { Navigation } from "../components/mobile/Navigation";
 import { prismicClient } from "../configs/prismic";
+import { Seo } from "../seo";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <PrismicProvider client={prismicClient}>
+      <Seo />
       <Component {...pageProps} />
       <ButtonUp />
       <Navigation />

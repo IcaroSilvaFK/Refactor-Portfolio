@@ -2,7 +2,8 @@ import type { NextPage } from "next";
 import Head from "next/head";
 
 import { MdOutlineAlternateEmail } from "react-icons/md";
-import { SiTwitter, SiWhatsapp } from "react-icons/si";
+import { SiTwitter } from "react-icons/si";
+import { BsYoutube } from "react-icons/bs";
 
 import { HorizontalCard } from "../../components/CardContact/Horizontal";
 import { SimpleCardContact } from "../../components/CardContact/SimpleCard";
@@ -47,6 +48,19 @@ const Contacts: NextPage = () => {
             link="https://www.linkedin.com/in/icarovieira"
           />
         </section>
+        <div className="flex justify-center items-center mt-10">
+          <button
+            onClick={() =>
+              window.open(
+                "https://www.youtube.com/channel/UCWI5AEpCVB8YZ9LNp1jcN7A/videos"
+              )
+            }
+            className="p-4 rounded shadow-2xl flex items-center gap-4 animate-bounce-slow hover:bg-purple-100"
+          >
+            ir para canal do Youtube
+            <BsYoutube color="#E71316" size={25} />
+          </button>
+        </div>
       </Layout>
     </>
   );

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from "react-icons/ai";
-import Link from "next/link";
-import { useRouter } from "next/router";
 
+import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from "react-icons/ai";
+import { useRouter } from "next/router";
+import { BsYoutube } from "react-icons/bs";
 /**
  * 
  * @returns 
@@ -31,37 +31,40 @@ export function Footer() {
         <nav>
           <ul className="flex gap-4">
             <li>
-              <Link
+              <a
                 href="https://www.linkedin.com/in/icarovieira/"
                 rel="noreferrer"
                 target="_blank"
               >
-                <a>
-                  <AiFillLinkedin size={25} color="#005BDD" />
-                </a>
-              </Link>
+                <AiFillLinkedin size={25} color="#005BDD" />
+              </a>
             </li>
             <li>
-              <Link
+              <a
                 href="https://github.com/IcaroSilvaFK"
                 rel="noreferrer"
                 target="_blank"
               >
-                <a>
-                  <AiFillGithub size={25} />
-                </a>
-              </Link>
+                <AiFillGithub size={25} />
+              </a>
             </li>
             <li>
-              <Link
+              <a
                 href="https://www.instagram.com/invites/contact/?i=hcrdp2qaj0bi&utm_content=65bbjhn"
                 target="_blank"
                 rel="noreferrer"
               >
-                <a>
-                  <AiFillInstagram size={25} color="#DE5954" />
-                </a>
-              </Link>
+                <AiFillInstagram size={25} color="#DE5954" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/channel/UCWI5AEpCVB8YZ9LNp1jcN7A"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <BsYoutube color="#E71316" size={25} />
+              </a>
             </li>
           </ul>
         </nav>

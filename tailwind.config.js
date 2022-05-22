@@ -40,6 +40,7 @@ module.exports = {
       "gray-900": "#171923",
 
       "purple-800": "#bd3dbd",
+      "purple-100": "#FFE6FF",
       white: "#fff",
     },
     screens: {
@@ -49,7 +50,7 @@ module.exports = {
     extend: {
       animation: {
         "bounce-slow": "bounce 2s linear infinite",
-        levite: "levite 3s linear infinite",
+        levite: "levite 2s linear infinite",
       },
       keyframes: {
         levite: {

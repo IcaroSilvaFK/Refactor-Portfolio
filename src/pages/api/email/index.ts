@@ -25,8 +25,8 @@ export default async function email(
       host: "smtp.mailtrap.io",
       port: 2525,
       auth: {
-        user: "2afbacbf4f74b1",
-        pass: "c31ba0e8d6f7e8",
+        user: process.env.NEXT_PUBLIC_MAIL_USER,
+        pass: process.env.NEXT_PUBLIC_MAIL_PASS,
       },
     });
 

@@ -1,3 +1,5 @@
+const plugin = require("@tailwindcss/forms");
+
 module.exports = {
   mode: "jit",
   purge: [
@@ -51,11 +53,20 @@ module.exports = {
       animation: {
         "bounce-slow": "bounce 2s linear infinite",
         levite: "levite 2s linear infinite",
+        carousel: "carousel 10s linear infinite",
       },
       keyframes: {
         levite: {
           "0%,100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
+        },
+        carousel: {
+          "0%": {
+            transform: "translateX(-1000px)",
+          },
+          "100%": {
+            transform: "translateX(2000px)",
+          },
         },
       },
     },

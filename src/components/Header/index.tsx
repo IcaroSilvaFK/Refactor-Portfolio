@@ -1,5 +1,5 @@
-import { useRouter } from "next/router";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { MenuMobile } from "../mobile/Menu";
 
 export function Header() {
@@ -29,13 +29,6 @@ export function Header() {
             <Link href="/projects">
               <a className="hover:text-purple-800 hover:underline transition">
                 Projetos
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/Contacts">
-              <a className="hover:text-purple-800 hover:underline  transition">
-                Contato
               </a>
             </Link>
           </li>

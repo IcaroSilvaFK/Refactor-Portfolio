@@ -1,6 +1,6 @@
-import { VscClose } from "react-icons/vsc";
-import Link from "next/link";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { VscClose } from "react-icons/vsc";
 
 import { useModalMobile } from "../../../store/store";
 
@@ -39,11 +39,6 @@ export function Navigation() {
             <li>
               <Link href="/projects">
                 <a>Projetos</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/Contacts">
-                <a>Contato</a>
               </Link>
             </li>
           </motion.ul>

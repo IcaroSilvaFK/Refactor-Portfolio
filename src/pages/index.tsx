@@ -76,7 +76,7 @@ const Home: NextPage<{ data: IUserProps }> = ({ data }) => {
                 "https://www.youtube.com/channel/UCWI5AEpCVB8YZ9LNp1jcN7A/videos"
               )
             }
-            className="p-4 rounded shadow-2xl flex items-center gap-4 animate-bounce-slow hover:bg-purple-100"
+            className="p-4 rounded shadow-2xl flex items-center gap-4 animate-bounce-slow"
           >
             ir para canal do Youtube
             <BsYoutube color="#E71316" size={25} />

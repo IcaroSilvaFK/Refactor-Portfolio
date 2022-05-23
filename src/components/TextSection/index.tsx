@@ -1,8 +1,8 @@
-import ReactTypingEffect from "react-typing-effect";
-import Image from "next/image";
-import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
-import { HiOutlineDownload } from "react-icons/hi";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { HiOutlineDownload } from "react-icons/hi";
+import ReactTypingEffect from "react-typing-effect";
 
 import { Button } from "../Button";
 

@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export function CarouselTecs() {
   const [width, setWidth] = useState(0);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
 

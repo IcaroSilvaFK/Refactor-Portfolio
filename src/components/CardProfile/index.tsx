@@ -1,7 +1,6 @@
-import { LazyMotion, domAnimation, m, useViewportScroll } from "framer-motion";
-import Roll from "react-reveal/Roll";
+import { domAnimation, LazyMotion, m } from "framer-motion";
 import Bounce from "react-reveal/Bounce";
-import { dateFormatter } from "../../utils/DateTimeFormatter";
+import Roll from "react-reveal/Roll";
 import { Button } from "../Button";
 import { Status } from "../Status";
 
@@ -46,19 +45,16 @@ export function CardProfile({
                 <strong className="text-white text-lg">{name}</strong>
                 <div className="my-2">
                   <p className="text-gray-200">Descrição :</p>
-                  <div className="w-[300px] ml-1">
+                  <div className="w-[300px] my-2">
                     <span className="text-gray-200">{bio}</span>
                   </div>
                 </div>
               </div>
 
               <div className="text-gray-200 flex items-end text-left my-2 mobile:flex-col mobile:items-center">
-                <div className=" flex flex-col">
+                <div className=" w-[100%] flex justify-between">
                   <span>seguidores: {followers}</span>
                   <span>seguindo: {following}</span>
-                </div>
-                <div>
-                  criado: <em>{dateFormatter(created_at)}</em>
                 </div>
               </div>
             </div>

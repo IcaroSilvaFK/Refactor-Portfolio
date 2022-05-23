@@ -3,6 +3,7 @@ import { GetStaticProps } from "next";
 import Head from "next/head";
 
 import { CardPost } from "../../components/CardPost";
+import { HeaderFixed } from "../../components/HeaderFixed";
 import { prismicClient } from "../../configs/prismic";
 import { Layout } from "../../layout";
 
@@ -34,6 +35,7 @@ const Projects: NextPage<{ posts: IPrismcPosts[] }> = ({ posts }) => {
         <title>Icaro Vieira DEV</title>
       </Head>
       <Layout>
+        <HeaderFixed />
         <div className="flex justify-center mt-6 flex-col gap-5 items-center mobile:p-2">
           {posts.map((element) => (
             <CardPost key={element.id} {...element} />

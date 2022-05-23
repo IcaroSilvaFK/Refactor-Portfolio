@@ -8,6 +8,7 @@ import { SimpleCardContact } from "../components/CardContact/SimpleCard";
 
 import { CardProfile } from "../components/CardProfile";
 import { CarouselTecs } from "../components/Coursel";
+import { HeaderFixed } from "../components/HeaderFixed";
 import { TextSection } from "../components/TextSection";
 import { userGithub } from "../configs/axiosGitihub";
 import { Layout } from "../layout";
@@ -29,8 +30,13 @@ const Home: NextPage<{ data: IUserProps }> = ({ data }) => {
         <title>Icaro Vieira DEV</title>
       </Head>
       <Layout>
+        <HeaderFixed />
         <TextSection />
         <CardProfile {...data} />
+        <div className="w-[100%] overflow-hidden">
+          <CarouselTecs />
+        </div>
+        <div className="my-8"></div>
         <div className=" mt-6 w-[100%]">
           <h1 className="text-center text-xl">Contatos :</h1>
         </div>
@@ -76,9 +82,8 @@ const Home: NextPage<{ data: IUserProps }> = ({ data }) => {
             <BsYoutube color="#E71316" size={25} />
           </button>
         </div>
-        <div className="mt-8 w-[100%] overflow-hidden">
-          <CarouselTecs />
-        </div>
+
+        <div className="my-8"></div>
       </Layout>
     </>
   );

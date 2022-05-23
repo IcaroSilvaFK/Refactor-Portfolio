@@ -1,4 +1,3 @@
-import React from "react";
 import { NextSeo } from "next-seo";
 
 export function Seo() {
@@ -18,7 +17,7 @@ export function Seo() {
         description: "Icaro Vieira DEV Front-End",
         images: [
           {
-            url: "https://avatars.githubusercontent.com/u/86238635?v=4",
+            url: "https://github.com/IcaroSilvaFK.png",
             width: 800,
             height: 600,
             alt: "Icaro Vieira",

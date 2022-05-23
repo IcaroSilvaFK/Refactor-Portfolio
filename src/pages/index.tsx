@@ -3,9 +3,9 @@ import Head from "next/head";
 import { BsYoutube } from "react-icons/bs";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { SiTwitter } from "react-icons/si";
+
 import { HorizontalCard } from "../components/CardContact/Horizontal";
 import { SimpleCardContact } from "../components/CardContact/SimpleCard";
-
 import { CardProfile } from "../components/CardProfile";
 import { CarouselTecs } from "../components/Coursel";
 import { HeaderFixed } from "../components/HeaderFixed";
@@ -109,3 +109,8 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 };
 
 export default Home;
+/*
+   {images.map((image) => (
+            <CarouselTecs key={image.id} {...image} />
+          ))}
+*/

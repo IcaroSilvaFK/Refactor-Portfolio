@@ -33,7 +33,6 @@ interface IImagesProps{
 
 const Home: NextPage<{ data: IUserProps,images: IImagesProps[]}> = ({ data,images }) => {
  
-  console.log(images)
   return (
     <>
       <Head>

@@ -23,7 +23,6 @@ export function HeaderFixed() {
     };
   }, [scroll]);
 
-  console.log(scroll);
 
   return (
     <>

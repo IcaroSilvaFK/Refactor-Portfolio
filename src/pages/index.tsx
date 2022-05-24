@@ -10,6 +10,7 @@ import { CardProfile } from "../components/CardProfile";
 import { CarouselTecs } from "../components/Coursel";
 import { HeaderFixed } from "../components/HeaderFixed";
 import { TextSection } from "../components/TextSection";
+import { apiBackend } from "../configs/axiosBackend";
 import { userGithub } from "../configs/axiosGitihub";
 import { Layout } from "../layout";
 
@@ -23,7 +24,16 @@ interface IUserProps {
   name: string;
 }
 
-const Home: NextPage<{ data: IUserProps }> = ({ data }) => {
+interface IImagesProps{
+  image_url: string;
+  alt: string;
+  id: string;
+}
+
+
+const Home: NextPage<{ data: IUserProps,images: IImagesProps[]}> = ({ data,images }) => {
+ 
+  console.log(images)
   return (
     <>
       <Head>
@@ -34,7 +44,7 @@ const Home: NextPage<{ data: IUserProps }> = ({ data }) => {
         <TextSection />
         <CardProfile {...data} />
         <div className="w-[100%] overflow-hidden">
-          <CarouselTecs />
+          <CarouselTecs data={images}/>
         </div>
         <div className="my-8"></div>
         <div className=" mt-6 w-[100%]">
@@ -91,11 +101,13 @@ const Home: NextPage<{ data: IUserProps }> = ({ data }) => {
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   try {
-    const { data } = await userGithub("IcaroSilvaFK");
+
+    const [{data}, {data:images}] = await Promise.all([userGithub("IcaroSilvaFK"), apiBackend.get("image")])
+
 
     return {
-      props: { data },
-      revalidate: 64 * 64 * 72,
+      props: { data,images },
+      revalidate: 64 * 64 * 24,
     };
   } catch (e) {
     return {

@@ -1,12 +1,8 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
 import { apiBackend } from "../../../configs/axiosBackend";
+import { IRequestProps } from "../../../interface/RequestProps.interface";
 import { SendEmail } from "../../../utils/sendEmail";
-
-interface IRequestProps {
-  message: string;
-  name: string;
-}
 
 export default async function email(
   request: NextApiRequest,

@@ -1,9 +1,5 @@
 import create from "zustand";
-
-interface IUseModalMobileProps {
-  isOpen: boolean;
-  toggleModal: () => void;
-}
+import { IUseModalMobileProps } from "../interface/ModalMobile.interface";
 
 export const useModalMobile = create<IUseModalMobileProps>()((set) => ({
   isOpen: false,

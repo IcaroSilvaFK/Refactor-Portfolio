@@ -5,28 +5,8 @@ import Head from "next/head";
 import { CardPost } from "../../components/CardPost";
 import { HeaderFixed } from "../../components/HeaderFixed";
 import { prismicClient } from "../../configs/prismic";
+import { IPrismcPosts } from "../../interface/Prismic.interface";
 import { Layout } from "../../layout";
-
-interface IPrismcPosts {
-  data: {
-    content: [{ text: string }];
-    image: {
-      alt: string;
-      url: string;
-    };
-    title: [
-      {
-        text: string;
-      }
-    ];
-    deployed: boolean;
-    url: {
-      url: string;
-    };
-    tecnologies: [{ tecs: { url: string; alt: string } }];
-  };
-  id: string;
-}
 
 const Projects: NextPage<{ posts: IPrismcPosts[] }> = ({ posts }) => {
   return (

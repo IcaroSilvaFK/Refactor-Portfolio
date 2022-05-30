@@ -12,23 +12,9 @@ import { HeaderFixed } from "../components/HeaderFixed";
 import { TextSection } from "../components/TextSection";
 import { apiBackend } from "../configs/axiosBackend";
 import { userGithub } from "../configs/axiosGitihub";
+import { IImagesProps } from "../interface/Images.interface";
+import { IUserProps } from "../interface/UserProps.interface";
 import { Layout } from "../layout";
-
-interface IUserProps {
-  avatar_url: string;
-  created_at: string;
-  html_url: string;
-  followers: number;
-  following: number;
-  bio: string;
-  name: string;
-}
-
-interface IImagesProps {
-  image_url: string;
-  alt: string;
-  id: string;
-}
 
 const Home: NextPage<{ data: IUserProps; images: IImagesProps[] }> = ({
   data,

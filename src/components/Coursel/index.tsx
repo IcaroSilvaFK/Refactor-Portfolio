@@ -9,7 +9,6 @@ interface ICarouselTecsProps {
 
 interface ICarouselProps{
   data: ICarouselTecsProps[]
-  
 }
 
 export function CarouselTecs({data}:ICarouselProps ) {

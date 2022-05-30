@@ -24,15 +24,16 @@ interface IUserProps {
   name: string;
 }
 
-interface IImagesProps{
+interface IImagesProps {
   image_url: string;
   alt: string;
   id: string;
 }
 
-
-const Home: NextPage<{ data: IUserProps,images: IImagesProps[]}> = ({ data,images }) => {
- 
+const Home: NextPage<{ data: IUserProps; images: IImagesProps[] }> = ({
+  data,
+  images,
+}) => {
   return (
     <>
       <Head>
@@ -43,7 +44,7 @@ const Home: NextPage<{ data: IUserProps,images: IImagesProps[]}> = ({ data,image
         <TextSection />
         <CardProfile {...data} />
         <div className="w-[100%] overflow-hidden">
-          <CarouselTecs data={images}/>
+          <CarouselTecs data={images} />
         </div>
         <div className="my-8"></div>
         <div className=" mt-6 w-[100%]">
@@ -100,12 +101,13 @@ const Home: NextPage<{ data: IUserProps,images: IImagesProps[]}> = ({ data,image
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   try {
-
-    const [{data}, {data:images}] = await Promise.all([userGithub("IcaroSilvaFK"), apiBackend.get("image")])
-
+    const [{ data }, { data: images }] = await Promise.all([
+      userGithub("IcaroSilvaFK"),
+      apiBackend.get("image"),
+    ]);
 
     return {
-      props: { data,images },
+      props: { data, images },
       revalidate: 64 * 64 * 24,
     };
   } catch (e) {
@@ -120,8 +122,3 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 };
 
 export default Home;
-/*
-   {images.map((image) => (
-            <CarouselTecs key={image.id} {...image} />
-          ))}
-*/

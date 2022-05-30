@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
-import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
 import { Layout } from "../layout";
@@ -15,7 +15,7 @@ const Error: NextPage = () => {
         <title>Icaro Vieira DEV</title>
       </Head>
       <Layout>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center -mt-6">
           <Image
             src="/assets/404.svg"
             width={430}

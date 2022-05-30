@@ -34,8 +34,9 @@ export function Form({ closeModal }: IFormComponentProps) {
 
   const onSubmit: SubmitHandler<IFormProps> = async (data) => {
     try {
-      const resposne = await axios.post("/api/email", data);
+      await axios.post("/api/email", data);
       setSuccess(true);
+
       toast.success("Mensagem enviada com sucesso obrigado !🥳", {
         position: "top-center",
         draggable: true,
@@ -43,6 +44,7 @@ export function Form({ closeModal }: IFormComponentProps) {
       });
     } catch (error) {
       setSuccess(false);
+
       toast.success("Infelizmente não conseguimos enviar a mensagem !😥", {
         position: "top-center",
         draggable: true,

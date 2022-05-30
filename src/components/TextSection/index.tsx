@@ -6,7 +6,7 @@ import ReactTypingEffect from "react-typing-effect";
 
 import { Button } from "../Button";
 
-const cotainer = {
+const container = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -26,7 +26,7 @@ export function TextSection() {
   return (
     <motion.section
       className="flex items-center justify-center w-[100%] mobile:flex-col mobile:items-center"
-      variants={cotainer}
+      variants={container}
       initial="hidden"
       animate="show"
     >
@@ -38,7 +38,7 @@ export function TextSection() {
       >
         <div className="w-[100%] flex mobile:justify-center">
           <ReactTypingEffect
-            text={"Olá me chamo, Icaro :)"}
+            text={"Olá, me chamo Icaro :)"}
             typingDelay={3000}
             eraseDelay={5000}
             className="text-4xl"

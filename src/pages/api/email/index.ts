@@ -1,7 +1,12 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import nodemailer from "nodemailer";
 
 import { apiBackend } from "../../../configs/axiosBackend";
+import { SendEmail } from "../../../utils/sendEmail";
+
+interface IRequestProps {
+  message: string;
+  name: string;
+}
 
 export default async function email(
   request: NextApiRequest,
@@ -13,7 +18,7 @@ export default async function email(
     return response.status(404).json({ message: "Cannot route" });
   }
 
-  const { message, name } = request.body;
+  const { message, name }: IRequestProps = request.body;
 
   if (!message || !name) {
     return response
@@ -21,32 +26,14 @@ export default async function email(
       .json({ message: "Error in the mandatory fields" });
   }
 
-  const transport = nodemailer.createTransport({
-    host: "smtp.mailtrap.io",
-    port: 2525,
-    auth: {
-      user: process.env.NEXT_PUBLIC_MAIL_USER,
-      pass: process.env.NEXT_PUBLIC_MAIL_PASS,
-    },
-  });
-
-  const sendEmail = {
-    email: `Icaro portfolio <${name}>`,
-    body: `<div><b>${message}</b></div>`,
-  };
-  await apiBackend.post("/", { email: name });
   try {
-    const data = await transport.sendMail({
-      subject: "Icaro Portfólio",
-      from: sendEmail.email,
-      to: "Icaro Vieira <icarovsilva1@gmail.com>",
-      html: sendEmail.body,
+    await SendEmail({
+      message,
+      name,
     });
+    await apiBackend.post("/", { email: name });
 
-    return response.status(200).json({
-      data,
-      email,
-    });
+    return response.status(200).json({ message: "Enviado com sucesso" });
   } catch (error) {
     return response.status(500).json({ message: "Error has ben ocorried" });
   }

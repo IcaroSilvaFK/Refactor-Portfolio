@@ -60,7 +60,7 @@ export function CardProfile({
             </div>
           </Bounce>
         </m.div>
-        <div className="flex items-center jsutify-center ml-14 mobile:ml-0">
+        <div className="flex items-center jsutify-center ml-2 mobile:ml-0">
           <Button variant="text" text="Ir para o Github" link={html_url} />
         </div>
       </section>

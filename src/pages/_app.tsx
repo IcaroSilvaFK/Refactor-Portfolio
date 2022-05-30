@@ -5,7 +5,7 @@ import type { AppProps } from "next/app";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import { ButtonUp } from "../components/ButtonMessage";
+import { Message } from "../components/ButtonMessage";
 import { Navigation } from "../components/mobile/Navigation";
 import { prismicClient } from "../configs/prismic";
 import { Seo } from "../seo";
@@ -15,7 +15,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <PrismicProvider client={prismicClient}>
       <Seo />
       <Component {...pageProps} />
-      <ButtonUp />
+      <Message />
       <Navigation />
       <ToastContainer />
     </PrismicProvider>

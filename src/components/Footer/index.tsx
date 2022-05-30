@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from "react-icons/ai";
 import { useRouter } from "next/router";
+import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 import { BsYoutube } from "react-icons/bs";
 /**
  * 
@@ -69,7 +69,7 @@ export function Footer() {
           </ul>
         </nav>
       </div>
-      <span className="text-sm">💻Feito por Icaro Silva ©</span>
+      <span className="text-sm">💻Feito com 💗 por Icaro ©</span>
     </footer>
   );
 }

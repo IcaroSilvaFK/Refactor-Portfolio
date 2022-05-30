@@ -3,7 +3,7 @@ import { RiMessage3Line } from "react-icons/ri";
 
 import { Form } from "../Form";
 
-export function ButtonUp() {
+export function Message() {
   const [visible, setVisible] = useState(false);
 
   useEffect(

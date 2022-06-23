@@ -4,17 +4,16 @@ import { apiBackend } from "../../../configs/axiosBackend";
 import { IRequestProps } from "../../../interface/RequestProps.interface";
 import { SendEmail } from "../../../utils/sendEmail";
 
-export default async function email(
-  request: NextApiRequest,
-  response: NextApiResponse
-) {
+type Request = NextApiRequest;
+type Response = NextApiResponse;
+
+export default async function email(request: Request, response: Response) {
   const { method } = request;
+  const { message, name }: IRequestProps = request.body;
 
   if (method !== "POST") {
     return response.status(404).json({ message: "Cannot route" });
   }
-
-  const { message, name }: IRequestProps = request.body;
 
   if (!message || !name) {
     return response

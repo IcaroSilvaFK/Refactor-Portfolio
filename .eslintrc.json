@@ -5,6 +5,7 @@
     "node": true
   },
   "extends": [
+    "next/core-web-vitals",
     "eslint:recommended",
     "plugin:import/typescript",
     "plugin:react/recommended",

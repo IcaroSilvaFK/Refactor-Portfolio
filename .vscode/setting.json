@@ -1,0 +1,18 @@
+{
+  "window.zoomLevel": 0,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
+  },
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "editor.inlineSuggest.enabled": true,
+  "files.exclude": {
+    ".next": true,
+    "**node_modules": true
+  }
+}

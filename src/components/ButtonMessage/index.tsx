@@ -1,32 +1,32 @@
-import { useEffect, useState } from "react";
-import { RiMessage3Line } from "react-icons/ri";
+import { memo, useCallback, useEffect, useState } from 'react';
+import { RiMessage3Line } from 'react-icons/ri';
 
-import { Form } from "../Form";
+import Form from '../Form';
 
-export function Message() {
+function Message() {
   const [visible, setVisible] = useState(false);
 
   useEffect(
     () => {
-      window.addEventListener("keydown", (e) => {
+      window.addEventListener('keydown', (e) => {
         switch (e.key) {
-          case "Escape": {
+          case 'Escape': {
             closeModal();
           }
         }
       });
     },
     //eslint-disable-next-line react-hooks/exhaustive-deps
-    []
+    [],
   );
 
-  function handleChangeVisible() {
+  const handleChangeVisible = useCallback(() => {
     setVisible((prev) => !prev);
-  }
+  }, []);
 
-  function closeModal() {
+  const closeModal = useCallback(() => {
     setVisible(false);
-  }
+  }, []);
 
   return (
     <div
@@ -47,3 +47,6 @@ export function Message() {
     </div>
   );
 }
+
+export default memo(Message);
+

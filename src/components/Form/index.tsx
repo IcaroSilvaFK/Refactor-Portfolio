@@ -1,16 +1,16 @@
-import { yupResolver } from "@hookform/resolvers/yup";
-import axios from "axios";
-import { useState } from "react";
-import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
-import { AiOutlineClose, AiOutlineUser } from "react-icons/ai";
-import { BiMessageSquareDetail } from "react-icons/bi";
-import { RiSendPlaneFill } from "react-icons/ri";
-import { toast } from "react-toastify";
+import { yupResolver } from '@hookform/resolvers/yup';
+import axios from 'axios';
+import { memo, useCallback, useState } from 'react';
+import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
+import { AiOutlineClose, AiOutlineUser } from 'react-icons/ai';
+import { BiMessageSquareDetail } from 'react-icons/bi';
+import { RiSendPlaneFill } from 'react-icons/ri';
+import { toast } from 'react-toastify';
 
-import { formSchema } from "../../schemas/formMessage";
-import { Button } from "../Button";
-import { Success } from "../Success";
-import { Input } from "./Input";
+import { formSchema } from '../../schemas/formMessage';
+import { Button } from '../Button';
+import { Success } from '../Success';
+import { Input } from './Input';
 
 interface IFormComponentProps {
   closeModal: () => void;
@@ -26,33 +26,33 @@ export function Form({ closeModal }: IFormComponentProps) {
 
   const props = useForm<IFormProps>({
     defaultValues: {
-      message: "",
-      name: "",
+      message: '',
+      name: '',
     },
     resolver: yupResolver(formSchema),
   });
 
-  const onSubmit: SubmitHandler<IFormProps> = async (data) => {
+  const onSubmit: SubmitHandler<IFormProps> = useCallback(async (data) => {
     try {
-      await axios.post("/api/email", data);
+      await axios.post('/api/email', data);
       setSuccess(true);
 
-      toast.success("Mensagem enviada com sucesso obrigado !🥳", {
-        position: "top-center",
+      toast.success('Mensagem enviada com sucesso obrigado !🥳', {
+        position: 'top-center',
         draggable: true,
-        theme: "light",
+        theme: 'light',
       });
     } catch (error) {
       setSuccess(false);
 
-      toast.success("Infelizmente não conseguimos enviar a mensagem !😥", {
-        position: "top-center",
+      toast.success('Infelizmente não conseguimos enviar a mensagem !😥', {
+        position: 'top-center',
         draggable: true,
-        theme: "light",
+        theme: 'light',
       });
     }
     props.reset();
-  };
+  }, []);
 
   return (
     <FormProvider {...props}>
@@ -83,7 +83,7 @@ export function Form({ closeModal }: IFormComponentProps) {
             <BiMessageSquareDetail size={20} color="#fff" />
             <textarea
               id=""
-              {...props.register("message")}
+              {...props.register('message')}
               className="resize-none w-[250px] h-16 outline-none rounded p-2 scrolllbar  scrollbar-track-transparent scrollbar-thin"
               placeholder="Deixe aqui sua mensagem"
             />
@@ -100,3 +100,5 @@ export function Form({ closeModal }: IFormComponentProps) {
     </FormProvider>
   );
 }
+
+export default memo(Form);

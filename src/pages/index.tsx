@@ -1,20 +1,20 @@
-import type { GetStaticProps, NextPage } from "next";
-import Head from "next/head";
-import { BsYoutube } from "react-icons/bs";
-import { MdOutlineAlternateEmail } from "react-icons/md";
-import { SiTwitter } from "react-icons/si";
+import type { GetStaticProps, NextPage } from 'next';
+import Head from 'next/head';
+import { BsYoutube } from 'react-icons/bs';
+import { MdOutlineAlternateEmail } from 'react-icons/md';
+import { SiTwitter } from 'react-icons/si';
 
-import { HorizontalCard } from "../components/CardContact/Horizontal";
-import { SimpleCardContact } from "../components/CardContact/SimpleCard";
-import { CardProfile } from "../components/CardProfile";
-import { CarouselTecs } from "../components/Coursel";
-import { HeaderFixed } from "../components/HeaderFixed";
-import { TextSection } from "../components/TextSection";
-import { apiBackend } from "../configs/axiosBackend";
-import { userGithub } from "../configs/axiosGitihub";
-import { IImagesProps } from "../interface/Images.interface";
-import { IUserProps } from "../interface/UserProps.interface";
-import { Layout } from "../layout";
+import { HorizontalCard } from '../components/CardContact/Horizontal';
+import { SimpleCardContact } from '../components/CardContact/SimpleCard';
+import { CardProfile } from '../components/CardProfile';
+import { CarouselTecs } from '../components/Coursel';
+import { HeaderFixed } from '../components/HeaderFixed';
+import { TextSection } from '../components/TextSection';
+import { apiBackend } from '../configs/axiosBackend';
+import { userGithub } from '../configs/axiosGitihub';
+import { IImagesProps } from '../interface/Images.interface';
+import { IUserProps } from '../interface/UserProps.interface';
+import { Layout } from '../layout';
 
 const Home: NextPage<{ data: IUserProps; images: IImagesProps[] }> = ({
   data,
@@ -69,7 +69,7 @@ const Home: NextPage<{ data: IUserProps; images: IImagesProps[] }> = ({
           <button
             onClick={() =>
               window.open(
-                "https://www.youtube.com/channel/UCWI5AEpCVB8YZ9LNp1jcN7A/videos"
+                'https://www.youtube.com/channel/UCWI5AEpCVB8YZ9LNp1jcN7A/videos',
               )
             }
             className="p-4 rounded shadow-2xl flex items-center gap-4 animate-bounce-slow"
@@ -88,10 +88,9 @@ const Home: NextPage<{ data: IUserProps; images: IImagesProps[] }> = ({
 export const getStaticProps: GetStaticProps = async (ctx) => {
   try {
     const [{ data }, { data: images }] = await Promise.all([
-      userGithub("IcaroSilvaFK"),
-      apiBackend.get("image"),
+      userGithub('IcaroSilvaFK'),
+      apiBackend.get('image'),
     ]);
-
     return {
       props: { data, images },
       revalidate: 64 * 64 * 24,
@@ -100,11 +99,16 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
     return {
       props: {},
       redirect: {
-        destination: "/error",
-        permanent: "false",
+        destination: '/error',
+        permanent: false,
       },
     };
   }
 };
 
 export default Home;
+
+//  ,
+//
+//
+

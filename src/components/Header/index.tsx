@@ -1,8 +1,9 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { MenuMobile } from "../mobile/Menu";
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { memo } from 'react';
+import { MenuMobile } from '../mobile/Menu';
 
-export function Header() {
+export const Header = memo(() => {
   const router = useRouter();
 
   return (
@@ -10,7 +11,7 @@ export function Header() {
       <div className="flex flex-col">
         <strong
           className="font-square text-4xl text-purple-800 cursor-pointer"
-          onClick={() => router.push("/")}
+          onClick={() => router.push('/')}
         >
           Icaro Vieira
         </strong>
@@ -37,4 +38,5 @@ export function Header() {
       <MenuMobile />
     </header>
   );
-}
+});
+

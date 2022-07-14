@@ -16,7 +16,7 @@ import { IImagesProps } from '../interface/Images.interface';
 import { IUserProps } from '../interface/UserProps.interface';
 import { Layout } from '../layout';
 
-const Home: NextPage<{ data: IUserProps; images: IImagesProps[] }> = ({
+const Home: NextPage<{ data: IUserProps; images: IImagesProps }> = ({
   data,
   images,
 }) => {
@@ -30,7 +30,7 @@ const Home: NextPage<{ data: IUserProps; images: IImagesProps[] }> = ({
         <TextSection />
         <CardProfile {...data} />
         <div className="w-[100%] overflow-hidden">
-          <CarouselTecs data={images} />
+          <CarouselTecs data={images.images} />
         </div>
         <div className="my-8"></div>
         <div className=" mt-6 w-[100%]">
@@ -107,8 +107,3 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 };
 
 export default Home;
-
-//  ,
-//
-//
-

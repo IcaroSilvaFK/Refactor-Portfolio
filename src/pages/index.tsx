@@ -93,7 +93,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
     ]);
     return {
       props: { data, images },
-      revalidate: 64 * 64 * 24,
+      revalidate: 64 * 64,
     };
   } catch (e) {
     return {

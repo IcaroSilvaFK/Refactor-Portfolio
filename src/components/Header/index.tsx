@@ -33,10 +33,19 @@ export const Header = memo(() => {
               </a>
             </Link>
           </li>
+          <li>
+            <a
+              href="https://blog-gamma-orcin.vercel.app/"
+              className="hover:text-purple-800 hover:underline  transition"
+              target="_blank"
+              rel="norrefer"
+            >
+              Blog
+            </a>
+          </li>
         </ul>
       </nav>
       <MenuMobile />
     </header>
   );
 });
-

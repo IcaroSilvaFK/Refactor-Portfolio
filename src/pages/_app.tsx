@@ -9,8 +9,14 @@ import Message from '../components/ButtonMessage';
 import { Navigation } from '../components/mobile/Navigation';
 import { prismicClient } from '../configs/prismic';
 import { Seo } from '../seo';
+import { useEffect } from 'react';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    document.body.scrollIntoView({
+      behavior: 'smooth',
+    });
+  }, []);
   return (
     <PrismicProvider client={prismicClient}>
       <Seo />
@@ -21,4 +27,3 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     </PrismicProvider>
   );
 }
-

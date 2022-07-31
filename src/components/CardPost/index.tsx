@@ -56,6 +56,8 @@ export function CardPost({ data }: ICardPosts) {
             <a
               href={data.url.url}
               className="hover:text-gray-600 hover:underline"
+              target="_blank"
+              rel="noreferrer"
             >
               {data.deployed
                 ? 'Link para o projeto'

@@ -1,12 +1,12 @@
-import type { NextPage } from "next";
-import { GetStaticProps } from "next";
-import Head from "next/head";
+import type { NextPage } from 'next';
+import { GetStaticProps } from 'next';
+import Head from 'next/head';
 
-import { CardPost } from "../../components/CardPost";
-import { HeaderFixed } from "../../components/HeaderFixed";
-import { prismicClient } from "../../configs/prismic";
-import { IPrismcPosts } from "../../interface/Prismic.interface";
-import { Layout } from "../../layout";
+import { CardPost } from '../../components/CardPost';
+import { HeaderFixed } from '../../components/HeaderFixed';
+import { prismicClient } from '../../configs/prismic';
+import { IPrismcPosts } from '../../interface/Prismic.interface';
+import { Layout } from '../../layout';
 
 const Projects: NextPage<{ posts: IPrismcPosts[] }> = ({ posts }) => {
   return (
@@ -16,7 +16,10 @@ const Projects: NextPage<{ posts: IPrismcPosts[] }> = ({ posts }) => {
       </Head>
       <Layout>
         <HeaderFixed />
-        <div className="flex justify-center mt-6 flex-col gap-5 items-center mobile:p-2">
+        <div
+          className="max-w-[1100px] m-auto
+        flex justify-center items-center mt-6 flex-col gap-5 mobile:p-2"
+        >
           {posts.map((element) => (
             <CardPost key={element.id} {...element} />
           ))}
@@ -28,7 +31,7 @@ const Projects: NextPage<{ posts: IPrismcPosts[] }> = ({ posts }) => {
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   try {
-    const posts = await prismicClient.getAllByType("projetos-sem-deploy");
+    const posts = await prismicClient.getAllByType('projetos-sem-deploy');
 
     return {
       props: { posts },
@@ -37,7 +40,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
   } catch (e) {
     return {
       redirect: {
-        destination: "/",
+        destination: '/',
         permanent: false,
       },
     };

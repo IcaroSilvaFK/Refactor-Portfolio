@@ -1,4 +1,4 @@
-import Bounce from "react-reveal/Bounce";
+import Bounce from 'react-reveal/Bounce';
 
 interface ICardPosts {
   data: {
@@ -10,7 +10,7 @@ interface ICardPosts {
     title: [
       {
         text: string;
-      }
+      },
     ];
     deployed: boolean;
     url: {
@@ -24,16 +24,16 @@ interface ICardPosts {
 export function CardPost({ data }: ICardPosts) {
   return (
     <Bounce left>
-      <section className="flex items-center border-dashed border-[4px] border-gray-400 max-w-[1000px] p-2 rounded shadow-lg mobile:flex-col">
+      <section className="flex items-center border-dashed border-[4px] border-gray-400 max-w-[1000px] w-full p-2 rounded shadow-lg mobile:flex-col">
         <div>
           <img
             src={data.image.url}
             alt={data.image.alt}
-            className="w-[40rem] rounded shadow-md"
+            className="max-w-[500px] rounded shadow-md object-cover"
           />
         </div>
-        <div className="flex flex-col justify-center items-center ml-4">
-          <div className="mobile:text-center mobile:p-2">
+        <div className="flex flex-col flex-1 justify-center h-full items-center ml-4">
+          <div className="text-center mobile:text-center mobile:p-2">
             <strong className="mb-3">{data.title[0].text}</strong>
             <p className="ml-3 text-gray-600">{data.content[0].text}</p>
             <div className="flex flex-col">
@@ -52,14 +52,14 @@ export function CardPost({ data }: ICardPosts) {
               </div>
             </div>
           </div>
-          <div className="flex justify-center mt-2 ">
+          <div className="flex flex-1 justify-center mt-2 justify-self-end">
             <a
               href={data.url.url}
               className="hover:text-gray-600 hover:underline"
             >
               {data.deployed
-                ? "Link para o projeto"
-                : "Link do código fonte do projeto"}
+                ? 'Link para o projeto'
+                : 'Link do código fonte do projeto'}
             </a>
           </div>
         </div>

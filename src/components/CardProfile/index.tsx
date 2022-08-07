@@ -17,7 +17,6 @@ interface IProfileProps {
 export function CardProfile({
   avatar_url,
   bio,
-  created_at,
   followers,
   following,
   html_url,

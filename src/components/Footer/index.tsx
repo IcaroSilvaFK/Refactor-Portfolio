@@ -22,7 +22,7 @@ export function Footer() {
         ? 'flex flex-col items-center gap-2 p-4  w-[100%]'
         : 'flex flex-col items-center gap-2 p-4  w-[100%]  absolute bottom-0',
     );
-  }, []);
+  }, [route]);
 
   return (
     <footer className={names}>

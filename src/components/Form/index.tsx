@@ -32,27 +32,31 @@ export function Form({ closeModal }: IFormComponentProps) {
     resolver: yupResolver(formSchema),
   });
 
-  const onSubmit: SubmitHandler<IFormProps> = useCallback(async (data) => {
-    try {
-      await axios.post('/api/email', data);
-      setSuccess(true);
+  const onSubmit: SubmitHandler<IFormProps> = useCallback(
+    async (data) => {
+      try {
+        await axios.post('/api/email', data);
+        setSuccess(true);
 
-      toast.success('Mensagem enviada com sucesso obrigado !🥳', {
-        position: 'top-center',
-        draggable: true,
-        theme: 'light',
-      });
-    } catch (error) {
-      setSuccess(false);
+        toast.success('Mensagem enviada com sucesso obrigado !🥳', {
+          position: 'top-center',
+          draggable: true,
+          theme: 'light',
+        });
+      } catch (error) {
+        setSuccess(false);
 
-      toast.success('Infelizmente não conseguimos enviar a mensagem !😥', {
-        position: 'top-center',
-        draggable: true,
-        theme: 'light',
-      });
-    }
-    props.reset();
-  }, []);
+        toast.success('Infelizmente não conseguimos enviar a mensagem !😥', {
+          position: 'top-center',
+          draggable: true,
+          theme: 'light',
+        });
+      }
+      props.reset();
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [],
+  );
 
   return (
     <FormProvider {...props}>

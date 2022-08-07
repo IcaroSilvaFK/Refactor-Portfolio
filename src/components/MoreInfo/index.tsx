@@ -1,4 +1,4 @@
-import Roll from "react-reveal/Roll";
+import Roll from 'react-reveal/Roll';
 
 export function MoreInfo({ image }: { image: string }) {
   return (

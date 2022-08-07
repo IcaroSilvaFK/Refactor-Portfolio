@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-import { useRouter } from "next/router";
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
-import { BsYoutube } from "react-icons/bs";
+import { useRouter } from 'next/router';
+import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
+import { BsYoutube } from 'react-icons/bs';
 /**
  * 
  * @returns 
@@ -14,13 +14,13 @@ import { BsYoutube } from "react-icons/bs";
 export function Footer() {
   const pathname = useRouter();
   const route = pathname.pathname;
-  const [names, setNames] = useState<string>("");
+  const [names, setNames] = useState<string>('');
 
   useEffect(() => {
     setNames(
-      route === "/" || route === "/projects"
-        ? "flex flex-col items-center gap-2 p-4  w-[100%]"
-        : "flex flex-col items-center gap-2 p-4  w-[100%]  absolute bottom-0"
+      route === '/' || route === '/projects'
+        ? 'flex flex-col items-center gap-2 p-4  w-[100%]'
+        : 'flex flex-col items-center gap-2 p-4  w-[100%]  absolute bottom-0',
     );
   }, []);
 

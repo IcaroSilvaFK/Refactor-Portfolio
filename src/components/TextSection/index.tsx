@@ -1,10 +1,10 @@
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import { HiOutlineDownload } from "react-icons/hi";
-import ReactTypingEffect from "react-typing-effect";
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import { HiOutlineDownload } from 'react-icons/hi';
+import ReactTypingEffect from 'react-typing-effect';
 
-import { Button } from "../Button";
+import { Button } from '../Button';
 
 const container = {
   hidden: { opacity: 0 },
@@ -38,7 +38,7 @@ export function TextSection() {
       >
         <div className="w-[100%] flex mobile:justify-center">
           <ReactTypingEffect
-            text={"Olá, me chamo Icaro :)"}
+            text={'Olá, me chamo Icaro :)'}
             typingDelay={3000}
             eraseDelay={5000}
             className="text-4xl"
@@ -47,7 +47,7 @@ export function TextSection() {
         <motion.div
           className="py-6 w-[450px] mobile:w-auto mobile:p-3 mobile:text-center"
           animate={{ x: [100, 0] }}
-          transition={{ ease: "easeOut", duration: 2.5 }}
+          transition={{ ease: 'easeOut', duration: 2.5 }}
         >
           <p className="text-lg text-gray-500">
             Desenvolvedor web, Front-End apaixonado por tecnologia.
@@ -57,7 +57,7 @@ export function TextSection() {
           <motion.div
             className="flex gap-8 ml-4"
             animate={{ opacity: [0, 1] }}
-            transition={{ ease: "linear", duration: 1 }}
+            transition={{ ease: 'linear', duration: 1 }}
           >
             <Button
               variant="outline"
@@ -73,7 +73,7 @@ export function TextSection() {
           <motion.div
             className="flex px-14"
             animate={{ opacity: [0, 1] }}
-            transition={{ ease: "linear", duration: 1 }}
+            transition={{ ease: 'linear', duration: 1 }}
           >
             <Button
               variant="full"
@@ -86,7 +86,7 @@ export function TextSection() {
       </motion.div>
       <motion.div
         animate={{ scale: [0, 1] }}
-        transition={{ ease: "easeOut", duration: 1 }}
+        transition={{ ease: 'easeOut', duration: 1 }}
       >
         <Image
           src="/assets/icon.png"

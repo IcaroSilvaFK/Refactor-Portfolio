@@ -8,7 +8,7 @@ export interface IPrismcPosts {
     title: [
       {
         text: string;
-      }
+      },
     ];
     deployed: boolean;
     url: {

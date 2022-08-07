@@ -1,6 +1,6 @@
-import { useEffect } from "react";
-import { Controller, useFormContext } from "react-hook-form";
-import { toast } from "react-toastify";
+import { useEffect } from 'react';
+import { Controller, useFormContext } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 interface IInputProps {
   name: string;
@@ -17,9 +17,9 @@ export function Input({ name, icon, placeholder, type }: IInputProps) {
 
   useEffect(() => {
     toast.error(errors[name]?.message, {
-      position: "top-center",
+      position: 'top-center',
       draggable: true,
-      theme: "light",
+      theme: 'light',
     });
   }, [errors[name]?.message]);
 
@@ -28,7 +28,7 @@ export function Input({ name, icon, placeholder, type }: IInputProps) {
       control={control}
       name={name}
       render={({ field }) => (
-        <div className='flex items-center p-2 rounded text-gray-100 gap-2'>
+        <div className="flex items-center p-2 rounded text-gray-100 gap-2">
           {icon && icon}
           <input
             {...field}

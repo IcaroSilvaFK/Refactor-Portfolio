@@ -38,7 +38,7 @@ export const Header = memo(() => {
               href="https://blog-gamma-orcin.vercel.app/"
               className="hover:text-purple-800 hover:underline  transition"
               target="_blank"
-              rel="norrefer"
+              rel="norrefer noreferrer"
             >
               Blog
             </a>

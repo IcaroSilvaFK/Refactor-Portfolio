@@ -1,10 +1,10 @@
-import nodemailer from "nodemailer";
-import { ISendEmailProps } from "../interface/SendMail.interface";
+import nodemailer from 'nodemailer';
+import { ISendEmailProps } from '../interface/SendMail.interface';
 
 export async function SendEmail({ name, message }: ISendEmailProps) {
   try {
     const transport = nodemailer.createTransport({
-      host: "smtp.mailtrap.io",
+      host: 'smtp.mailtrap.io',
       port: 2525,
       auth: {
         user: process.env.NEXT_PUBLIC_MAIL_USER,
@@ -18,9 +18,9 @@ export async function SendEmail({ name, message }: ISendEmailProps) {
     };
 
     await transport.sendMail({
-      subject: "Icaro Portfólio",
+      subject: 'Icaro Portfólio',
       from: sendEmail.email,
-      to: "Icaro Vieira <icarovsilva1@gmail.com>",
+      to: 'Icaro Vieira <icarovsilva1@gmail.com>',
       html: sendEmail.body,
     });
   } catch (error) {

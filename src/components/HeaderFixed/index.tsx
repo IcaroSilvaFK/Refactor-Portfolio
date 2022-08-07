@@ -60,7 +60,7 @@ export function HeaderFixed() {
                   href="https://blog-gamma-orcin.vercel.app/"
                   className="hover:text-purple-800 hover:underline  transition"
                   target="_blank"
-                  rel="norrefer"
+                  rel="norrefer noreferrer"
                   title="Fique por dentro das principais notícias do mundo da tecnologia"
                 >
                   Blog

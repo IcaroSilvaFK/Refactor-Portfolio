@@ -1,10 +1,10 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import { useRouter } from "next/router";
-import { AiOutlineArrowLeft } from "react-icons/ai";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+import { AiOutlineArrowLeft } from 'react-icons/ai';
 
-import { Layout } from "../layout";
+import { Layout } from '../layout';
 
 const Error: NextPage = () => {
   const router = useRouter();
@@ -26,7 +26,7 @@ const Error: NextPage = () => {
         </div>
         <button
           className="mx-auto flex items-center gap-1 rounded shadow-xl p-2 bg-purple-800 text-white hover:brightness-75"
-          onClick={() => router.push("/")}
+          onClick={() => router.push('/')}
         >
           <AiOutlineArrowLeft size={20} />
           voltar

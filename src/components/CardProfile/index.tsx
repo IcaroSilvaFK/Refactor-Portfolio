@@ -1,8 +1,8 @@
-import { domAnimation, LazyMotion, m } from "framer-motion";
-import Bounce from "react-reveal/Bounce";
-import Roll from "react-reveal/Roll";
-import { Button } from "../Button";
-import { Status } from "../Status";
+import { domAnimation, LazyMotion, m } from 'framer-motion';
+import Bounce from 'react-reveal/Bounce';
+import Roll from 'react-reveal/Roll';
+import { Button } from '../Button';
+import { Status } from '../Status';
 
 interface IProfileProps {
   avatar_url: string;

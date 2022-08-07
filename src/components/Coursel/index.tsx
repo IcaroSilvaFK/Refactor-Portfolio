@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 interface ICarouselTecsProps {
   image_url: string;
@@ -13,23 +13,33 @@ interface ICarouselProps {
 
 export function CarouselTecs({ data }: ICarouselProps) {
   const [width, setWidth] = useState(0);
+  const divRef = useRef<HTMLDivElement | null>(null);
+  const imageRef = useRef<HTMLImageElement | null>(null);
+
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
+
   return (
-    <div className="w-[100%] flex justify-center gap-4 relative p-8 ">
+    <div
+      className="w-[100%] flex justify-center gap-4 relative p-4"
+      ref={divRef}
+      id="container__slider"
+    >
       {data.map((image) => (
         <motion.img
           src={image.image_url}
           alt={image.alt}
-          animate={{ x: [-width, width + 200] }}
+          className="rounded shadow-xl object-cover"
+          key={image.id}
+          animate={{
+            x: [-width - 200, width + width],
+          }}
           transition={{
             repeat: Infinity,
-            duration: 25,
+            duration: 30,
             ease: 'linear',
           }}
-          className="rounded shadow-xl"
-          key={image.id}
         />
       ))}
     </div>

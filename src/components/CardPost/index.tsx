@@ -18,13 +18,12 @@ interface ICardPosts {
     };
     tecnologies: [{ tecs: { url: string; alt: string } }];
   };
-  id: string;
 }
 
 export function CardPost({ data }: ICardPosts) {
   return (
     <Bounce left>
-      <section className="flex items-center border-dashed border-[4px] border-gray-400 max-w-[1000px] w-full p-2 rounded shadow-lg mobile:flex-col">
+      <section className="flex items-center border-dashed border-[4px] border-gray-400 max-w-[1100px] w-full p-2  mx-auto rounded shadow-lg mobile:flex-col max-h-auto">
         <div>
           <img
             src={data.image.url}
@@ -36,7 +35,9 @@ export function CardPost({ data }: ICardPosts) {
         <div className="flex flex-col flex-1 justify-center h-full items-center ml-4">
           <div className="text-center mobile:text-center mobile:p-2">
             <strong className="mb-3">{data.title[0].text}</strong>
-            <p className="ml-3 text-gray-600">{data.content[0].text}</p>
+            <p className="ml-3 text-gray-600 text-ellipsis ">
+              {data.content[0].text}
+            </p>
             <div className="flex flex-col">
               <div className="mt-2 ml-2 text-gray-700">
                 <span>Tecnologias :</span>
@@ -53,7 +54,7 @@ export function CardPost({ data }: ICardPosts) {
               </div>
             </div>
           </div>
-          <div className="flex flex-1 justify-center mt-2 justify-self-end">
+          <div className="flex justify-center mt-2 justify-self-end">
             <a
               href={data.url.url}
               className="hover:text-gray-600 hover:underline"

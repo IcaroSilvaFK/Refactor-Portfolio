@@ -27,7 +27,9 @@ const Home: NextPage<{ data: IUserProps; images: IImagesProps }> = ({
       </Head>
       <Layout>
         <HeaderFixed />
-        <TextSection />
+        <section className="h-[100vh] w-[100%]">
+          <TextSection />
+        </section>
         <CardProfile {...data} />
         <div className="w-[100%] overflow-hidden">
           <CarouselTecs data={images.images} />

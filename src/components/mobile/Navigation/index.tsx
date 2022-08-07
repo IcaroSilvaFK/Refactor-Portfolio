@@ -1,8 +1,8 @@
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { VscClose } from "react-icons/vsc";
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { VscClose } from 'react-icons/vsc';
 
-import { useModalMobile } from "../../../store/store";
+import { useModalMobile } from '../../../store/store';
 
 export function Navigation() {
   const { isOpen, toggleModal } = useModalMobile((state) => state);
@@ -40,6 +40,16 @@ export function Navigation() {
               <Link href="/projects">
                 <a>Projetos</a>
               </Link>
+            </li>
+            <li>
+              <a
+                href="https://blog-gamma-orcin.vercel.app/"
+                className="hover:text-purple-800 hover:underline  transition"
+                target="_blank"
+                rel="norrefer"
+              >
+                Blog
+              </a>
             </li>
           </motion.ul>
         </nav>

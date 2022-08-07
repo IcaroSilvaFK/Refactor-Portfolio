@@ -16,14 +16,14 @@ const Projects: NextPage<{ posts: IPrismcPosts[] }> = ({ posts }) => {
       </Head>
       <Layout>
         <HeaderFixed />
-        <div
-          className="max-w-[1100px] m-auto
+        <section
+          className="max-w-[1100px] m-auto 
         flex justify-center items-center mt-6 flex-col gap-5 mobile:p-2"
         >
-          {posts.map((element) => (
-            <CardPost key={element.id} {...element} />
+          {posts.map((post) => (
+            <CardPost {...post} key={post.id} />
           ))}
-        </div>
+        </section>
       </Layout>
     </>
   );

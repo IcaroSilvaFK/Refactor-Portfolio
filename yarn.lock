@@ -214,15 +214,15 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@prismicio/client@^6.6.4":
-  version "6.6.4"
-  resolved "https://registry.yarnpkg.com/@prismicio/client/-/client-6.6.4.tgz#c282427fc1f9cd6c38257ffe83a74d43973f40ea"
-  integrity sha512-5Mx8yCWN0ZoG8BwvBSCGsOhwCwSdyyCp1VOxOOb9gB+i+POT7xeZABJOdwtSwE1/Cyy7Bvpr8w1b0ItrSc0rmw==
+"@prismicio/client@6.4.3":
+  version "6.4.3"
+  resolved "https://registry.yarnpkg.com/@prismicio/client/-/client-6.4.3.tgz#9a8358fbe9f4c871a790223b572b85bf9018cadb"
+  integrity sha512-UrOMeXc4upAqBgE0MRuw/S//NTaOi6LWTb7OmTUEyWaOVURILcMLKbcL879futl7pPfx1KI7t+cyQWnH0irCHA==
   dependencies:
-    "@prismicio/helpers" "^2.3.3"
-    "@prismicio/types" "^0.2.1"
+    "@prismicio/helpers" "^2.2.1"
+    "@prismicio/types" "^0.1.27"
 
-"@prismicio/helpers@^2.3.1", "@prismicio/helpers@^2.3.3":
+"@prismicio/helpers@^2.2.1", "@prismicio/helpers@^2.3.0":
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/@prismicio/helpers/-/helpers-2.3.3.tgz#de576b6da66ba283f56275408ad81add7b856785"
   integrity sha512-P3oYJnBeJPz/ClUBUewbE+ak73gs5JVL+C1G6TfgN5G5j0MYkwMluZXBqbC3yDTx8jxNeQUADyI8V05cl0Jdgw==
@@ -232,12 +232,12 @@
     escape-html "^1.0.3"
     imgix-url-builder "^0.0.3"
 
-"@prismicio/react@^2.4.4":
-  version "2.4.4"
-  resolved "https://registry.yarnpkg.com/@prismicio/react/-/react-2.4.4.tgz#45ba15e07ed737ca362b63e437db17b59ed4409b"
-  integrity sha512-tF3YNGRF32qxjY2H6uRfgvV2R467puMeWIEoquzvQvy4tsjy5ERex54hMMr0GsMaymzNQZbx65Usu8/yGfIG5Q==
+"@prismicio/react@2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@prismicio/react/-/react-2.3.0.tgz#3bfd4951143b41a2225083d309b9d8289190dd7a"
+  integrity sha512-bgFh/iZD4czoWakZkPc4Z0oDwur8OsxRcpVzsI0sQC8brscfS3ZbA8PK5NwBe5D2jCCzSJo8dnUnnckzAhEdWg==
   dependencies:
-    "@prismicio/helpers" "^2.3.1"
+    "@prismicio/helpers" "^2.3.0"
     "@prismicio/richtext" "^2.0.1"
 
 "@prismicio/richtext@^2.0.1", "@prismicio/richtext@^2.1.0":
@@ -246,6 +246,11 @@
   integrity sha512-/99JR2NUU2WV0025eAIqjd9OnF4ITaM57SVuhLc1XBUgnJe0HZrC9f24YKVW43jFR5HYTJtLgz01WjEddymqmA==
   dependencies:
     "@prismicio/types" "^0.2.0"
+
+"@prismicio/types@^0.1.27":
+  version "0.1.29"
+  resolved "https://registry.yarnpkg.com/@prismicio/types/-/types-0.1.29.tgz#52914a5ba304c8b75fdcf398e5014ac4364fdffb"
+  integrity sha512-wp7DHqMK0FDMcFQfJbqTAzWNBkM6/rRq71jMw6x9m07nWCUqytJQQKg6/15uduIeSqPXmyfJW21drsmChGaxsQ==
 
 "@prismicio/types@^0.2.0", "@prismicio/types@^0.2.1":
   version "0.2.1"

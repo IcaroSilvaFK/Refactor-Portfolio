@@ -16,12 +16,12 @@ export function Input({ name, icon, placeholder, type }: IInputProps) {
   } = useFormContext();
 
   useEffect(() => {
-    toast.error(errors[name]?.message, {
+    toast.error(errors[name]?.message as undefined, {
       position: 'top-center',
       draggable: true,
       theme: 'light',
     });
-  }, [errors[name]?.message]);
+  }, [errors, name]);
 
   return (
     <Controller

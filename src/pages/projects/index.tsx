@@ -29,7 +29,7 @@ const Projects: NextPage<{ posts: IPrismcPosts[] }> = ({ posts }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async (ctx) => {
+export const getStaticProps: GetStaticProps = async () => {
   try {
     const posts = await prismicClient.getAllByType('projetos-sem-deploy');
 

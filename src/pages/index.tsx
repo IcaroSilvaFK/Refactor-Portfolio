@@ -87,7 +87,7 @@ const Home: NextPage<{ data: IUserProps; images: IImagesProps }> = ({
   );
 };
 
-export const getStaticProps: GetStaticProps = async (ctx) => {
+export const getStaticProps: GetStaticProps = async () => {
   try {
     const [{ data }, { data: images }] = await Promise.all([
       userGithub('IcaroSilvaFK'),

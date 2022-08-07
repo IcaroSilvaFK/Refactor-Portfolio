@@ -27,6 +27,7 @@
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "import/no-anonymous-default-export": "off",
     "import/no-unresolved": "off",
-    "@typescript-eslint/no-non-null-assertion": "off"
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@next/next/no-img-element": "off"
   }
 }

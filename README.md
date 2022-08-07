@@ -25,7 +25,7 @@
   </tbody>
 </table>
 
-## Para iniciar o proejto na sua máquina 
+## Para iniciar o projeto na sua máquina 
 
 ```shell
   

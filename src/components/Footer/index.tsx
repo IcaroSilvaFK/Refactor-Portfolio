@@ -12,20 +12,8 @@ import { BsYoutube } from 'react-icons/bs';
  */
 
 export function Footer() {
-  const pathname = useRouter();
-  const route = pathname.pathname;
-  const [names, setNames] = useState<string>('');
-
-  useEffect(() => {
-    setNames(
-      route === '/' || route === '/projects'
-        ? 'flex flex-col items-center gap-2 p-4  w-[100%]'
-        : 'flex flex-col items-center gap-2 p-4  w-[100%]  absolute bottom-0',
-    );
-  }, [route]);
-
   return (
-    <footer className={names}>
+    <footer className="flex flex-col items-center gap-2 p-4  w-[100%]">
       <div>
         <span className="my-1 block text-center">Contatos :</span>
         <nav>

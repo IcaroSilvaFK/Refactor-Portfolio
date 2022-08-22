@@ -32,15 +32,11 @@ export default function Images({ images }: { images: IImagesProps[] }) {
   );
 
   const onSubmit: SubmitHandler<IFormProps> = async ({ alt, url }) => {
-    try {
-      await axios.post('/api/images', {
-        alt,
-        url,
-      });
-      reset();
-    } catch (err) {
-      console.log(err);
-    }
+    await axios.post('/api/images', {
+      alt,
+      url,
+    });
+    reset();
   };
 
   return (

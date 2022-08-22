@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 
 interface ICarouselTecsProps {
-  image_url: string;
+  url: string;
   alt: string;
   id: string;
 }
@@ -14,7 +14,7 @@ interface ICarouselProps {
 export function CarouselTecs({ data }: ICarouselProps) {
   const [width, setWidth] = useState(0);
   const divRef = useRef<HTMLDivElement | null>(null);
-
+  console.log(data);
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
@@ -27,7 +27,7 @@ export function CarouselTecs({ data }: ICarouselProps) {
     >
       {data.map((image) => (
         <motion.img
-          src={image.image_url}
+          src={image.url}
           alt={image.alt}
           className="rounded shadow-xl object-cover"
           key={image.id}

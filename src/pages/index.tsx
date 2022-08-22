@@ -10,13 +10,13 @@ import { CardProfile } from '../components/CardProfile';
 import { CarouselTecs } from '../components/Coursel';
 import { HeaderFixed } from '../components/HeaderFixed';
 import { TextSection } from '../components/TextSection';
-import { apiBackend } from '../configs/axiosBackend';
 import { userGithub } from '../configs/axiosGitihub';
+import { prismaClient } from '../configs/prisma';
 import { IImagesProps } from '../interface/Images.interface';
 import { IUserProps } from '../interface/UserProps.interface';
 import { Layout } from '../layout';
 
-const Home: NextPage<{ data: IUserProps; images: IImagesProps }> = ({
+const Home: NextPage<{ data: IUserProps; images: IImagesProps[] }> = ({
   data,
   images,
 }) => {
@@ -32,7 +32,7 @@ const Home: NextPage<{ data: IUserProps; images: IImagesProps }> = ({
         </section>
         <CardProfile {...data} />
         <div className="w-[100%] overflow-hidden">
-          <CarouselTecs data={images.images} />
+          <CarouselTecs data={images} />
         </div>
         <div className="my-8"></div>
         <div className=" mt-6 w-[100%]">
@@ -89,12 +89,11 @@ const Home: NextPage<{ data: IUserProps; images: IImagesProps }> = ({
 
 export const getStaticProps: GetStaticProps = async () => {
   try {
-    const [{ data }, { data: images }] = await Promise.all([
-      userGithub('IcaroSilvaFK'),
-      apiBackend.get('image'),
-    ]);
+    const { data } = await userGithub.get('IcaroSilvaFK');
+    const allBandages = await prismaClient.images.findMany();
+
     return {
-      props: { data, images },
+      props: { data, images: allBandages },
       revalidate: 64 * 64,
     };
   } catch (e) {

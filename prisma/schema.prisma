@@ -9,3 +9,12 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+
+model Images{
+  id String @id @default(cuid())
+  url String
+  alt String
+
+  @@map("bandages")
+}

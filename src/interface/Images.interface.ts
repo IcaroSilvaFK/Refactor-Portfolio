@@ -1,9 +1,5 @@
 export interface IImagesProps {
-  images: [
-    {
-      alt: string;
-      image_url: string;
-      id: string;
-    },
-  ];
+  alt: string;
+  url: string;
+  id: string;
 }

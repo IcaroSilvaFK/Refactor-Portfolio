@@ -14,7 +14,6 @@ interface ICarouselProps {
 export function CarouselTecs({ data }: ICarouselProps) {
   const [width, setWidth] = useState(0);
   const divRef = useRef<HTMLDivElement | null>(null);
-  console.log(data);
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);

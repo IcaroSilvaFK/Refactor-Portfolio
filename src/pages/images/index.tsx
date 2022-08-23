@@ -1,7 +1,7 @@
+import { useEffect, useState } from 'react';
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { IoMdArrowRoundBack } from 'react-icons/io';
 import axios from 'axios';
@@ -20,13 +20,7 @@ export default function Images({ images }: { images: IImagesProps[] }) {
   const navigate = useRouter();
 
   useEffect(
-    () => {
-      navigator.geolocation.getCurrentPosition((e) => {
-        if (e.coords.accuracy !== 23459.604606304343) {
-          navigate.push('/');
-        }
-      });
-    },
+    () => {},
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [],
   );

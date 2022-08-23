@@ -1,5 +1,6 @@
 import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
+import { useCallback } from 'react';
 import { BsYoutube } from 'react-icons/bs';
 import { MdOutlineAlternateEmail } from 'react-icons/md';
 import { SiTwitter } from 'react-icons/si';
@@ -20,6 +21,12 @@ const Home: NextPage<{ data: IUserProps; images: IImagesProps[] }> = ({
   data,
   images,
 }) => {
+  const handleOpenNewTab = useCallback(() => {
+    window.open(
+      'https://www.youtube.com/channel/UCWI5AEpCVB8YZ9LNp1jcN7A/videos',
+    );
+  }, []);
+
   return (
     <>
       <Head>
@@ -34,7 +41,7 @@ const Home: NextPage<{ data: IUserProps; images: IImagesProps[] }> = ({
         <div className="w-[100%] overflow-hidden">
           <CarouselTecs data={images} />
         </div>
-        <div className="my-8"></div>
+        <div className="my-8" />
         <div className=" mt-6 w-[100%]">
           <h1 className="text-center text-xl">Contatos :</h1>
         </div>
@@ -69,19 +76,16 @@ const Home: NextPage<{ data: IUserProps; images: IImagesProps[] }> = ({
         </section>
         <div className="flex justify-center items-center mt-10">
           <button
-            onClick={() =>
-              window.open(
-                'https://www.youtube.com/channel/UCWI5AEpCVB8YZ9LNp1jcN7A/videos',
-              )
-            }
+            onClick={handleOpenNewTab}
             className="p-4 rounded shadow-2xl flex items-center gap-4 animate-bounce-slow"
+            aria-label="button"
           >
             ir para canal do Youtube
             <BsYoutube color="#E71316" size={25} />
           </button>
         </div>
 
-        <div className="my-8"></div>
+        <div className="my-8" />
       </Layout>
     </>
   );

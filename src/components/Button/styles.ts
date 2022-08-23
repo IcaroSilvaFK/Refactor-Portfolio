@@ -22,7 +22,7 @@ export const ButtonVariant = styled('button', {
       },
       full: {
         backgroundColor: '#bd3dbd',
-        boxShadow: '0 0 10px rgba(0,0,0,0.4)',
+        boxShadow: '0 0 10px rgba(0,0,0,0.2)',
         color: '#fff',
         width: '150px',
         height: '40px',

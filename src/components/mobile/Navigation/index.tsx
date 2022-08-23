@@ -1,11 +1,21 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import React, { useCallback } from 'react';
 import { VscClose } from 'react-icons/vsc';
 
 import { useModalMobile } from '../../../store/store';
 
 export function Navigation() {
   const { isOpen, toggleModal } = useModalMobile((state) => state);
+
+  const stopAndToogleModal = useCallback(
+    (e: React.MouseEvent) => {
+      e.stopPropagation();
+      toggleModal();
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [],
+  );
 
   if (!isOpen) {
     return null;
@@ -26,10 +36,8 @@ export function Navigation() {
       >
         <button
           className="absolute top-2 right-2 bg-purple-800 p-1 rounded-full"
-          onClick={(e) => {
-            e.stopPropagation();
-            toggleModal();
-          }}
+          aria-label="button"
+          onClick={stopAndToogleModal}
         >
           <VscClose size={25} color="#fff" />
         </button>

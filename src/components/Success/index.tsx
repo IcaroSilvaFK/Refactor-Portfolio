@@ -25,6 +25,7 @@ export function Success({ handleNewMessage, closeModal }: ISuccessPorps) {
       <button
         onClick={handleNewMessage}
         className="text-white underline mt-4 flex items-center gap-1"
+        aria-label="button"
       >
         <MdOutlineArrowBack />
         nova mensagem

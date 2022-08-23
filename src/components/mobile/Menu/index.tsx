@@ -6,7 +6,11 @@ export function MenuMobile() {
   const { toggleModal } = useModalMobile((state) => state);
 
   return (
-    <button onClick={toggleModal} className="hidden mobile:block">
+    <button
+      onClick={toggleModal}
+      className="hidden mobile:block"
+      aria-label="button"
+    >
       <HiMenu size={25} />
     </button>
   );

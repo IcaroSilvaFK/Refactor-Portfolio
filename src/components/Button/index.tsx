@@ -9,9 +9,9 @@ interface IButtonProps {
 
 export function Button({ icon, text, variant, link }: IButtonProps) {
   return (
-    <ButtonVariant color={variant}>
+    <ButtonVariant color={variant} aria-label="button">
       {variant === 'outline' || variant === 'text' ? (
-        <a href={link} target="_blanck" className="block">
+        <a href={link} target="_blanck" className="block" title={text}>
           {icon}
           <span>{text}</span>{' '}
         </a>
@@ -20,6 +20,7 @@ export function Button({ icon, text, variant, link }: IButtonProps) {
           href={link}
           download="Icaro-curriculum"
           className="flex items-center"
+          title={text}
         >
           {icon}
           <span>{text}</span>

@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -19,12 +18,6 @@ export default function Images({ images }: { images: IImagesProps[] }) {
   const { register, handleSubmit, reset } = useForm<IFormProps>();
   const navigate = useRouter();
 
-  useEffect(
-    () => {},
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [],
-  );
-
   const onSubmit: SubmitHandler<IFormProps> = async ({ alt, url }) => {
     await axios.post('/api/images', {
       alt,
@@ -37,6 +30,7 @@ export default function Images({ images }: { images: IImagesProps[] }) {
     <>
       <Head>
         <title>Images Carrousel</title>
+        <meta name="robots" content="noindex, nofollow" />
       </Head>
       <div className="overflow-hidden">
         <button
@@ -77,7 +71,7 @@ export default function Images({ images }: { images: IImagesProps[] }) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
   try {
     const bandages = await prismaClient.images.findMany();
 

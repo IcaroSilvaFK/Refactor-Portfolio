@@ -26,7 +26,7 @@ export function HeaderFixed() {
   return (
     <>
       {visible && (
-        <div className="fixed top-0 flex items-center justify-between w-[80%] z-10 bg-[rgba(255,255,255)] left-[50%] translate-x-[-50%] rounded-b py-2 px-12 shadow-lg mobile:hidden overflow-hidden">
+        <div className="fixed top-0 flex items-center justify-between w-[82%] z-10 bg-[rgba(255,255,255)] left-[50%] translate-x-[-50%] rounded-b py-2 px-12 shadow-lg mobile:hidden overflow-hidden">
           <div className="flex flex-col">
             <strong
               className="font-square text-4xl text-purple-800 cursor-pointer"
@@ -43,14 +43,20 @@ export function HeaderFixed() {
             >
               <li>
                 <Link href="/">
-                  <a className="hover:text-purple-800 hover:underline  transition">
+                  <a
+                    className="hover:text-purple-800 hover:underline  transition"
+                    title="Home"
+                  >
                     Home
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/projects">
-                  <a className="hover:text-purple-800 hover:underline transition">
+                  <a
+                    className="hover:text-purple-800 hover:underline transition"
+                    title="Projetos"
+                  >
                     Projetos
                   </a>
                 </Link>

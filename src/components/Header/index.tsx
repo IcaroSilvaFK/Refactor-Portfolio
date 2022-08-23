@@ -21,14 +21,20 @@ export const Header = memo(() => {
         <ul className="flex gap-8 text-lg">
           <li>
             <Link href="/">
-              <a className="hover:text-purple-800 hover:underline  transition">
+              <a
+                className="hover:text-purple-800 hover:underline  transition"
+                title="Home"
+              >
                 Home
               </a>
             </Link>
           </li>
           <li>
             <Link href="/projects">
-              <a className="hover:text-purple-800 hover:underline transition">
+              <a
+                className="hover:text-purple-800 hover:underline transition"
+                title="Projetos"
+              >
                 Projetos
               </a>
             </Link>
@@ -39,6 +45,7 @@ export const Header = memo(() => {
               className="hover:text-purple-800 hover:underline  transition"
               target="_blank"
               rel="norrefer noreferrer"
+              title="Link para o blog"
             >
               Blog
             </a>

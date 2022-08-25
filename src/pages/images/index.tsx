@@ -71,7 +71,7 @@ export default function Images({ images }: { images: IImagesProps[] }) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
+export const getServerSideProps: GetServerSideProps = async () => {
   try {
     const bandages = await prismaClient.images.findMany();
 

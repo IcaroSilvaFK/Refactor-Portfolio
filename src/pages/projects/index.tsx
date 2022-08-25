@@ -24,6 +24,7 @@ const Projects: NextPage<{ posts: IPrismcPosts[] }> = ({ posts }) => {
             <CardPost {...post} key={post.id} />
           ))}
         </section>
+        <div className="mt-7" />
       </Layout>
     </>
   );

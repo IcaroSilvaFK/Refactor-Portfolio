@@ -29,7 +29,7 @@ export function CardPost({ data }: ICardPosts) {
             src={data.image.url}
             alt={data.image.alt}
             className="
-            max-w-[500px] rounded shadow-md object-cover mobile:w-[340px]"
+            w-[500px] h-[250px] rounded shadow-md object-cover mobile:w-[340px] "
           />
         </div>
         <div className="flex flex-col flex-1 justify-center h-full items-center ml-4">
@@ -48,7 +48,7 @@ export function CardPost({ data }: ICardPosts) {
                     src={tec.tecs.url}
                     alt={tec.tecs.url}
                     key={tec.tecs.url}
-                    className="rounded shadow-lg hover:scale-105"
+                    className="rounded shadow-lg"
                   />
                 ))}
               </div>

@@ -19,11 +19,15 @@ export default function Images({ images }: { images: IImagesProps[] }) {
   const navigate = useRouter();
 
   const onSubmit: SubmitHandler<IFormProps> = async ({ alt, url }) => {
-    await axios.post('/api/images', {
-      alt,
-      url,
-    });
-    reset();
+    try {
+      await axios.post('/api/images', {
+        alt,
+        url,
+      });
+      reset();
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (

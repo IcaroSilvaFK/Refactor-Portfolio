@@ -12,10 +12,11 @@ import { CarouselTecs } from '../components/Coursel';
 import { HeaderFixed } from '../components/HeaderFixed';
 import { TextSection } from '../components/TextSection';
 import { userGithub } from '../configs/axiosGitihub';
-import { prismaClient } from '../configs/prisma';
-import { IImagesProps } from '../interface/Images.interface';
-import { IUserProps } from '../interface/UserProps.interface';
 import { Layout } from '../layout';
+
+import { prismaClient } from '../configs/prisma';
+import { IImagesProps } from '../DTOs/ImageResponse';
+import { IUserProps } from '../DTOs/UserGithubResponse';
 
 const Home: NextPage<{ data: IUserProps; images: IImagesProps[] }> = ({
   data,

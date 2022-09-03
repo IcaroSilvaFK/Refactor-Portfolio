@@ -3,9 +3,9 @@ import { GetStaticProps } from 'next';
 import Head from 'next/head';
 
 import { CardPost } from '../../components/CardPost';
+import { IPrismcPosts } from '../../DTOs/PrismicResponse';
 import { HeaderFixed } from '../../components/HeaderFixed';
 import { prismicClient } from '../../configs/prismic';
-import { IPrismcPosts } from '../../interface/Prismic.interface';
 import { Layout } from '../../layout';
 
 const Projects: NextPage<{ posts: IPrismcPosts[] }> = ({ posts }) => {

@@ -5,7 +5,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { IoMdArrowRoundBack } from 'react-icons/io';
 import axios from 'axios';
 
-import { IImagesProps } from '../../interface/Images.interface';
+import { IImagesProps } from '../../DTOs/ImageResponse';
 import { prismaClient } from '../../configs/prisma';
 import { CarouselTecs } from '../../components/Coursel';
 

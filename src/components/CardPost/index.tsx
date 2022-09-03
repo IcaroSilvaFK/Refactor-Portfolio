@@ -1,26 +1,8 @@
 import Bounce from 'react-reveal/Bounce';
 
-interface ICardPosts {
-  data: {
-    content: [{ text: string }];
-    image: {
-      alt: string;
-      url: string;
-    };
-    title: [
-      {
-        text: string;
-      },
-    ];
-    deployed: boolean;
-    url: {
-      url: string;
-    };
-    tecnologies: [{ tecs: { url: string; alt: string } }];
-  };
-}
+import { IPrismcPosts } from '../../DTOs/PrismicResponse';
 
-export function CardPost({ data }: ICardPosts) {
+export function CardPost({ data }: IPrismcPosts) {
   return (
     <Bounce left>
       <section className="flex items-center border-dashed border-[4px] border-gray-400 max-w-[1100px] w-full p-2  mx-auto rounded shadow-lg mobile:flex-col max-h-auto">

@@ -29,7 +29,7 @@ export function HeaderFixed() {
   }
 
   return (
-    <div className="fixed top-0 flex items-center justify-between w-[82%] z-10 bg-[rgba(255,255,255)] left-[50%] translate-x-[-50%] rounded-b py-2 px-12 shadow-lg mobile:hidden overflow-hidden">
+    <div className="fixed top-0 flex items-center justify-between  max-w-[1200px] w-[100%]  z-10 bg-[rgba(255,255,255)] left-[50%] translate-x-[-50%] rounded-b py-2 px-12 shadow-lg mobile:hidden overflow-hidden desktop:max-w-[80%]">
       <div className="flex flex-col">
         <strong
           className="font-square text-4xl text-purple-800 cursor-pointer"

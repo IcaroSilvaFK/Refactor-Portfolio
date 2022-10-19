@@ -42,6 +42,7 @@ module.exports = {
     },
     screens: {
       mobile: { max: '500px' },
+      desktop: { max: '1250px' },
       table: { max: '900px' },
     },
     extend: {

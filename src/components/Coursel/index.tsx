@@ -1,8 +1,5 @@
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper';
-
 interface ICarouselTecsProps {
   url: string;
   alt: string;

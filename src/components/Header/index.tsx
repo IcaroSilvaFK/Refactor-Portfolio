@@ -7,7 +7,7 @@ export const Header = memo(() => {
   const router = useRouter();
 
   return (
-    <header className=" py-8 border-b gap-16 mobile:p-2 ">
+    <header className="py-8 border-b gap-16 mobile:p-2 ">
       <div className="max-w-[1200px] flex justify-between items-center m-auto desktop:max-w-[80%]">
         <div className="flex flex-col">
           <strong

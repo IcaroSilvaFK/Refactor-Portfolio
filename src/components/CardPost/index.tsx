@@ -1,4 +1,5 @@
 import Bounce from 'react-reveal/Bounce';
+import Tilt from 'react-vanilla-tilt';
 
 import { IPrismcPosts } from '../../DTOs/PrismicResponse';
 
@@ -7,12 +8,14 @@ export function CardPost({ data }: IPrismcPosts) {
     <Bounce left>
       <section className="flex items-center border-dashed border-[4px] border-gray-400 max-w-[1100px] w-full p-2  mx-auto rounded shadow-lg mobile:flex-col max-h-auto">
         <div>
-          <img
-            src={data.image.url}
-            alt={data.image.alt}
-            className="
+          <Tilt style={{ flex: 1 }}>
+            <img
+              src={data.image.url}
+              alt={data.image.alt}
+              className="
             w-[500px] h-[250px] rounded shadow-md object-cover mobile:w-[340px] "
-          />
+            />
+          </Tilt>
         </div>
         <div className="flex flex-col flex-1 max-w-[450px] justify-center h-full items-center ml-4">
           <div className="text-center mobile:text-center mobile:p-2">
@@ -26,12 +29,13 @@ export function CardPost({ data }: IPrismcPosts) {
               </div>
               <div className="flex gap-3 justify-center mt-3 flex-wrap">
                 {data.tecnologies.map((tec) => (
-                  <img
-                    src={tec.tecs.url}
-                    alt={tec.tecs.url}
-                    key={tec.tecs.url}
-                    className="rounded shadow-lg"
-                  />
+                  <Tilt style={{ maxWidth: 'content' }} key={tec.tecs.url}>
+                    <img
+                      src={tec.tecs.url}
+                      alt={tec.tecs.url}
+                      className="rounded shadow-lg"
+                    />
+                  </Tilt>
                 ))}
               </div>
             </div>

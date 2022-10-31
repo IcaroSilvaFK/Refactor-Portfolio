@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper';
 
 interface ICarouselTecsProps {
   url: string;
@@ -19,11 +21,7 @@ export function CarouselTecs({ data }: ICarouselProps) {
   }, []);
 
   return (
-    <div
-      className="w-[100%] flex justify-center gap-4 relative p-4"
-      ref={divRef}
-      id="container__slider"
-    >
+    <div ref={divRef} id="container__slider" className="mt-4 flex gap-4">
       {data.map((image) => (
         <motion.img
           src={image.url}
@@ -31,7 +29,7 @@ export function CarouselTecs({ data }: ICarouselProps) {
           className="rounded shadow-xl object-cover"
           key={image.id}
           animate={{
-            x: [-width - 200, width + width],
+            x: [-width - 200, width + width / 2],
           }}
           transition={{
             repeat: Infinity,

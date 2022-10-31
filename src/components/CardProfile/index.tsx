@@ -1,6 +1,8 @@
 import { domAnimation, LazyMotion, m } from 'framer-motion';
 import Bounce from 'react-reveal/Bounce';
 import Roll from 'react-reveal/Roll';
+import Tilt from 'react-vanilla-tilt';
+
 import { Button } from '../Button';
 import { Status } from '../Status';
 
@@ -29,13 +31,21 @@ export function CardProfile({
           <Roll>
             <div className="relative">
               <Status />
-              <img
-                src={avatar_url}
-                alt={name}
-                width={150}
-                height={150}
-                className="rounded-full"
-              />
+              <Tilt
+                style={{
+                  width: 'auto',
+                  background: 'transparent',
+                  boxShadow: 'none',
+                }}
+              >
+                <img
+                  src={avatar_url}
+                  alt={name}
+                  width={150}
+                  height={150}
+                  className="rounded-full hover:scale-110 shadow-2xl"
+                />
+              </Tilt>
             </div>
           </Roll>
           <Bounce>

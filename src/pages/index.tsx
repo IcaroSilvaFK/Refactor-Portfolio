@@ -38,7 +38,7 @@ const Home: NextPage<{ data: IUserProps; images: IImagesProps[] }> = ({
       </Head>
       <Layout>
         <HeaderFixed />
-        <section className="h-[100vh] w-[100%]">
+        <section className="h-[88vh] w-[100%]">
           <TextSection />
         </section>
         <CardProfile {...data} />
@@ -49,7 +49,7 @@ const Home: NextPage<{ data: IUserProps; images: IImagesProps[] }> = ({
         <div className=" mt-6 w-[100%]">
           <h1 className="text-center text-xl">Contatos :</h1>
         </div>
-        <section className="flex justify-center items-center flex-col mt-8 gap-14">
+        <section className="flex justify-center items-center flex-col mt-12">
           <Tilt style={{ maxWidth: 'content', background: 'transparent' }}>
             <SimpleCardContact
               icon={<MdOutlineAlternateEmail size={20} color="#F56565" />}

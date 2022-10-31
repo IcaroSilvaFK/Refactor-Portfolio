@@ -25,8 +25,8 @@ const item = {
 
 export function TextSection() {
   return (
-    <motion.section
-      className="flex items-center justify-center w-[100%] mobile:flex-col mobile:items-center"
+    <motion.div
+      className="flex items-center justify-between w-[100%] max-w-[1200px] m-auto mobile:flex-col mobile:items-center desktop:max-w-[80%]"
       variants={container}
       initial="hidden"
       animate="show"
@@ -96,6 +96,6 @@ export function TextSection() {
           alt="Programing Focusing"
         />
       </motion.div>
-    </motion.section>
+    </motion.div>
   );
 }

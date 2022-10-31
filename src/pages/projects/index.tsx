@@ -2,9 +2,8 @@ import type { NextPage } from 'next';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 
-import { CardPost } from '../../components/CardPost';
+import { CardPost, HeaderFixed } from '../../components';
 import { IPrismcPosts } from '../../DTOs/PrismicResponse';
-import { HeaderFixed } from '../../components/HeaderFixed';
 import { prismicClient } from '../../configs/prismic';
 import { Layout } from '../../layout';
 
@@ -33,7 +32,7 @@ const Projects: NextPage<{ posts: IPrismcPosts[] }> = ({ posts }) => {
 export const getStaticProps: GetStaticProps = async () => {
   try {
     const posts = await prismicClient.getAllByType('projetos-sem-deploy');
-
+    console.log(posts);
     return {
       props: { posts },
       revalidate: 60 * 60 * 24,

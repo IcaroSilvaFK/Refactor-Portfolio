@@ -33,6 +33,7 @@ export default function Images({ images }: { images: IImagesProps[] }) {
   return (
     <>
       <Head>
+
         <title>Images Carrousel</title>
         <meta name="robots" content="noindex, nofollow" />
       </Head>
@@ -49,6 +50,7 @@ export default function Images({ images }: { images: IImagesProps[] }) {
           className="flex flex-col justify-center items-center
           gap-3"
         >
+
           <input
             type="text"
             {...register('url')}
@@ -68,7 +70,6 @@ export default function Images({ images }: { images: IImagesProps[] }) {
             Adicionar
           </button>
         </form>
-
         <CarouselTecs data={images} />
       </div>
     </>

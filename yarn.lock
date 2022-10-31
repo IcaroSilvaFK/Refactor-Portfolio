@@ -107,12 +107,26 @@
   resolved "https://registry.yarnpkg.com/@motionone/types/-/types-10.13.0.tgz#b22c549931ebd88ed5528158b5d611dc9dbb3756"
   integrity sha512-qegk4qg8U1N9ZwAJ187BG3TkZz1k9LP/pvNtCSlqdq/PMUDKlCFG4ZnjJ481P0IOH/vIw1OzIbKIuyg0A3rk9g==
 
+"@motionone/types@^10.14.0":
+  version "10.14.0"
+  resolved "https://registry.yarnpkg.com/@motionone/types/-/types-10.14.0.tgz#148c34f3270b175397e49c3058b33fab405c21e3"
+  integrity sha512-3bNWyYBHtVd27KncnJLhksMFQ5o2MSdk1cA/IZqsHtA9DnRM1SYgN01CTcJ8Iw8pCXF5Ocp34tyAjY7WRpOJJQ==
+
 "@motionone/utils@^10.12.0", "@motionone/utils@^10.13.1":
   version "10.13.1"
   resolved "https://registry.yarnpkg.com/@motionone/utils/-/utils-10.13.1.tgz#14919dfcda36b54b184fff690bc0125d554f60cd"
   integrity sha512-TjDPTIppaf3ofBXQv4ZzAketJgN0sclALXfZ6mfrkjJkOy83mLls9744F+6S+VKCpBmvbZcBY4PQfrfhAfeMtA==
   dependencies:
     "@motionone/types" "^10.13.0"
+    hey-listen "^1.0.8"
+    tslib "^2.3.1"
+
+"@motionone/utils@^10.14.0":
+  version "10.14.0"
+  resolved "https://registry.yarnpkg.com/@motionone/utils/-/utils-10.14.0.tgz#a19a3464ed35b08506747b062d035c7bc9bbe708"
+  integrity sha512-sLWBLPzRqkxmOTRzSaD3LFQXCPHvDzyHJ1a3VP9PRzBxyVd2pv51/gMOsdAcxQ9n+MIeGJnxzXBYplUHKj4jkw==
+  dependencies:
+    "@motionone/types" "^10.14.0"
     hey-listen "^1.0.8"
     tslib "^2.3.1"
 
@@ -2098,6 +2112,13 @@ react-typing-effect@^2.0.5:
     react "^16.13.1"
     react-dom "^16.13.1"
 
+react-vanilla-tilt@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-vanilla-tilt/-/react-vanilla-tilt-1.0.0.tgz#ea2ab3d1e75ebbbca862a35664aee6837ffd5918"
+  integrity sha512-AuFFvbudpQIdzPeci9kP4p4Mo3QVIEtFVNu+iskMzNT0Efhi1fH5wzmdfMqWX8g82ypVgjAlwgdBWL9opnL2ow==
+  dependencies:
+    vanilla-tilt "1.4.1"
+
 react@18.1.0:
   version "18.1.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.1.0.tgz#6f8620382decb17fdc5cc223a115e2adbf104890"
@@ -2456,6 +2477,11 @@ v8-compile-cache@^2.0.3:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/v8-compile-cache/-/v8-compile-cache-2.3.0.tgz#2de19618c66dc247dcfb6f99338035d8245a2cee"
   integrity sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==
+
+vanilla-tilt@1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/vanilla-tilt/-/vanilla-tilt-1.4.1.tgz#7dae5fe5904c160140b92e586a1ddd81c93bc4a9"
+  integrity sha512-yZS4jIejmhqThLlwzJ5juPwDMk6rtf+ekADDK1lAYNiw6H2VGAJr9bt8vCp+ED5kyK6sE0sMq6mxPfV8a/NdFw==
 
 which-boxed-primitive@^1.0.2:
   version "1.0.2"

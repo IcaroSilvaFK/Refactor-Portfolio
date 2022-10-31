@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { HiOutlineDownload } from 'react-icons/hi';
 import ReactTypingEffect from 'react-typing-effect';
+import Tilt from 'react-vanilla-tilt';
 
 import { Button } from '../Button';
 

@@ -4,13 +4,16 @@ import { useCallback } from 'react';
 import { BsYoutube } from 'react-icons/bs';
 import { MdOutlineAlternateEmail } from 'react-icons/md';
 import { SiTwitter } from 'react-icons/si';
+import Tilt from 'react-vanilla-tilt';
 
-import { HorizontalCard } from '../components/CardContact/Horizontal';
-import { SimpleCardContact } from '../components/CardContact/SimpleCard';
-import { CardProfile } from '../components/CardProfile';
-import { CarouselTecs } from '../components/Coursel';
-import { HeaderFixed } from '../components/HeaderFixed';
-import { TextSection } from '../components/TextSection';
+import {
+  HorizontalCard,
+  SimpleCardContact,
+  CardProfile,
+  CarouselTecs,
+  HeaderFixed,
+  TextSection,
+} from '../components';
 import { userGithub } from '../configs/axiosGitihub';
 import { Layout } from '../layout';
 
@@ -46,17 +49,22 @@ const Home: NextPage<{ data: IUserProps; images: IImagesProps[] }> = ({
         <div className=" mt-6 w-[100%]">
           <h1 className="text-center text-xl">Contatos :</h1>
         </div>
-        <section className="flex justify-center items-center flex-col mt-8">
-          <SimpleCardContact
-            icon={<MdOutlineAlternateEmail size={20} color="#F56565" />}
-            text="Email :"
-            contact="icarovsilva1@gmail.com"
-          />
-          <SimpleCardContact
-            icon={<SiTwitter size={20} color="#25AAE1" />}
-            text="Twitter :"
-            contact="@IcaroVieiraFK"
-          />
+        <section className="flex justify-center items-center flex-col mt-8 gap-14">
+          <Tilt style={{ maxWidth: 'content', background: 'transparent' }}>
+            <SimpleCardContact
+              icon={<MdOutlineAlternateEmail size={20} color="#F56565" />}
+              text="Email :"
+              contact="icarovsilva1@gmail.com"
+            />
+          </Tilt>
+          <div className="mt-2" />
+          <Tilt style={{ maxWidth: 'content', background: 'transparent' }}>
+            <SimpleCardContact
+              icon={<SiTwitter size={20} color="#25AAE1" />}
+              text="Twitter :"
+              contact="@IcaroVieiraFK"
+            />
+          </Tilt>
         </section>
         <section className="flex gap-3 mt-10 justify-center mobile:p-2">
           <HorizontalCard
@@ -85,7 +93,6 @@ const Home: NextPage<{ data: IUserProps; images: IImagesProps[] }> = ({
             <BsYoutube color="#E71316" size={25} />
           </button>
         </div>
-
         <div className="my-8" />
       </Layout>
     </>

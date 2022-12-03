@@ -18,7 +18,7 @@ export function Button({ icon, text, variant, link }: IButtonProps) {
       ) : (
         <a
           href={link}
-          download="Icaro-curriculum"
+          download="Icaro_Vieira_curriculum"
           className="flex items-center"
           title={text}
         >

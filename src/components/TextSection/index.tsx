@@ -41,7 +41,7 @@ export function TextSection() {
             text={'Olá, me chamo Icaro :)'}
             typingDelay={3000}
             eraseDelay={5000}
-            className="text-4xl"
+            className="text-4xl mobile:text-2xl"
           />
         </div>
         <motion.div
@@ -50,7 +50,7 @@ export function TextSection() {
           transition={{ ease: 'easeOut', duration: 2.5 }}
         >
           <p className="text-lg text-gray-700">
-            Desenvolvedor web, Front-End apaixonado por tecnologia.
+            Desenvolvedor web, apaixonado por tecnologias.
           </p>
         </motion.div>
         <div className="flex flex-col">

@@ -49,9 +49,9 @@ export function TextSection() {
           animate={{ x: [100, 0] }}
           transition={{ ease: 'easeOut', duration: 2.5 }}
         >
-          <p className="text-lg text-gray-700">
+          <h1 className="text-lg text-gray-700">
             Desenvolvedor web, apaixonado por tecnologias.
-          </p>
+          </h1>
         </motion.div>
         <div className="flex flex-col">
           <motion.div

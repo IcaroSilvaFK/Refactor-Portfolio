@@ -33,7 +33,7 @@ const Home: NextPage<{ data: IUserProps; images: IImagesProps[] }> = ({
   };
 
   useEffect(() => {
-    toast('Olá Seja Bem Vindo 🚀', {
+    toast('Olá Seja Bem-vindo. 🚀', {
       position: 'top-center',
       draggable: true,
       pauseOnHover: true,

@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-
 import Marquee from 'react-fast-marquee';
 
 interface ICarouselTecsProps {
@@ -15,9 +13,9 @@ interface ICarouselProps {
 export function CarouselTecs({ data }: ICarouselProps) {
   return (
     <div className="mt-4">
-      <Marquee>
+      <Marquee speed={60}>
         {data.map((image) => (
-          <motion.img
+          <img
             src={image.url}
             alt={image.alt}
             className="rounded shadow-xl object-cover"

@@ -1,10 +1,11 @@
 import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
 import { BsYoutube } from 'react-icons/bs';
 import { MdOutlineAlternateEmail } from 'react-icons/md';
 import { SiTwitter } from 'react-icons/si';
 import Tilt from 'react-vanilla-tilt';
+import { toast } from 'react-toastify';
 
 import {
   HorizontalCard,
@@ -25,10 +26,18 @@ const Home: NextPage<{ data: IUserProps; images: IImagesProps[] }> = ({
   data,
   images,
 }) => {
-  const handleOpenNewTab = useCallback(() => {
+  const handleOpenNewTab = () => {
     window.open(
       'https://www.youtube.com/channel/UCWI5AEpCVB8YZ9LNp1jcN7A/videos',
     );
+  };
+
+  useEffect(() => {
+    toast('Olá Seja Bem Vindo 🚀', {
+      position: 'top-center',
+      draggable: true,
+      pauseOnHover: true,
+    });
   }, []);
 
   return (

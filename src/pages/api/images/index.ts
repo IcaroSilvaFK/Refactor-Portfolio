@@ -30,6 +30,7 @@ export default async function AddImagesInDatabase(
       },
     });
 
+    await response.revalidate('/');
     return response.status(201).json({
       message: 'Bandage create success',
       bandage,

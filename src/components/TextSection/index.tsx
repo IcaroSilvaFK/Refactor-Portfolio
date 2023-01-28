@@ -78,7 +78,7 @@ export function TextSection() {
             <Button
               variant="full"
               icon={<HiOutlineDownload size={25} />}
-              link="/assets/Icaro_Vieira_curriculum.pdf"
+              link="/assets/icaro_curriculum.pdf"
               text="Currículo"
             />
           </motion.div>
